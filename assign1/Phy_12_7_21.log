@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.2)  5 JAN 2024 15:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.2)  5 JAN 2024 16:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1185,8 +1185,7 @@ LaTeX Font Info:    Trying to load font information for OT1+txr on input line 5
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
-)
-No file Phy_12_7_21.aux.
+) (./Phy_12_7_21.aux)
 \openout1 = `Phy_12_7_21.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 50.
@@ -1303,6 +1302,8 @@ LaTeX Info: Redefining \ohm on input line 50.
 Package gensymb Info: Using \textohm for \ohm on input line 50.
 Package gensymb Info: Using \textmu for \micro on input line 50.
 Package hyperref Info: Link coloring OFF on input line 50.
+
+(./Phy_12_7_21.out) (./Phy_12_7_21.out)
 \@outlinefile=\write5
 \openout5 = `Phy_12_7_21.out'.
 
@@ -1345,18 +1346,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--68
 
 
 ] (./Phy_12_7_21.aux)
-
-Package rerunfilecheck Warning: File `Phy_12_7_21.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Phy_12_7_21.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `Phy_12_7_21.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 46238 strings out of 476091
- 1081475 string characters out of 5794082
+ 46244 strings out of 476091
+ 1081571 string characters out of 5794082
  1879330 words of memory out of 5000000
  65912 multiletter control sequences out of 15000+600000
  577916 words of font info for 174 fonts, out of 8000000 for 9000
