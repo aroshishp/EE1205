@@ -20,6 +20,7 @@
 \usepackage{gvv}  
 \usepackage{tikz}
 \usepackage{circuitikz} 
+\usepackage{caption}
 
 \def\inputGnumericTable{}                                
 \usepackage[latin1]{inputenc}                 
@@ -66,39 +67,33 @@ sharpness of the resonance of the circuit by reducing its `full width at half ma
 \textbf{Solution: }
 Given parameters are:
 
-$\text{L} = 3.0\, \text{H}$
+\begin{table}[h]
+    \centering
+    \resizebox{4 cm}{!}{
+    \begin{tabular}{c|c}
+    \hline
+    Parameter & Value\\
+    \hline
+      L   &  $3.0\, \text{H}$\\
+      C   &  $27\, \mu\text{F}$\\
+      R   &  $7.4\, \Omega$\\
+    \hline
+    \end{tabular}}
+    \vspace{10 pt}
+    \caption{Given Parameters}
+    \label{tab:my_label}
+\end{table}
 
-$\text{C} = 27\, \mu\text{F}$
-
-$\text{R} = 7.4\, \Omega$
-
-\begin{center}
-\begin{circuitikz}
-    \draw(0, 0) -- (1, 0);
-    \draw(1, 0) to [L, l = $3.0\text{H}$](2, 0);
-    \draw(2, 0) -- (3, 0);
-    \draw(3, 0) to [C, l = $27\, \mu\text{F}$](4, 0);
-    \draw(4, 0) -- (5, 0);
-    \draw(5, 0) to [R, l = $7.4\Omega$](6, 0);
-    \draw(0, 0) -- (0, -2);
-    \draw(6, 0) -- (7, 0);
-    \draw(7, 0) -- (7, -2);
-    \draw(0, -2) -- (3, -2);
-    \draw(7, -2) -- (7, -2);
-    \draw(3, -2) to [sV](4, -2);
-    \draw(4, -2) -- (7, -2);
-\end{circuitikz}
-\end{center}
-Resonance Frequency ($\omega$) is given by:
+\noindent Resonance Frequency ($\omega_0$) is given by:
 
 \begin{center}
-$\omega = \dfrac{1}{\sqrt{LC}}$ 
+$\omega_0 = \dfrac{1}{\sqrt{LC}}$ 
 \end{center}
 Substituting values of L and C gives:
 \begin{align}
-\omega &= \dfrac{1}{\sqrt{3\cdot27\times10^{-6}}}\\
+\omega_0 &= \dfrac{1}{\sqrt{3\cdot27\times10^{-6}}}\\
 &= \dfrac{10^{3}}{9}\, s^{-1}\\
-&= 111.1\, s^{-1} 
+&= 111.12\, s^{-1} 
 \end{align}
 Quality Factor (Q) is given by:
 \begin{center}
@@ -116,6 +111,144 @@ To reduce the full width at half maximum by a factor of 2, the quality factor ne
     &= \dfrac{7.4}{2}\Omega\\
     &= 3.7\Omega
 \end{align}
+
+\begin{figure}[h]
+ \centering
+    \begin{circuitikz}
+    \draw(0, 0) -- (1, 0);
+    \draw(1, 0) to [L, l = $3.0\text{H}$](2, 0);
+    \draw(2, 0) -- (3, 0);
+    \draw(3, 0) to [C, l = $27\, \mu\text{F}$](4, 0);
+    \draw(4, 0) -- (5, 0);
+    \draw(5, 0) to [R, l = $7.4\Omega$](6, 0);
+    \draw(0, 0) -- (0, -2);
+    \draw(6, 0) -- (7, 0);
+    \draw(7, 0) -- (7, -2);
+    \draw(0, -2) -- (3, -2);
+    \draw(7, -2) -- (7, -2);
+    \draw(3, -2) to [sV, l = $V(t)$](4, -2);
+    \draw(4, -2) -- (7, -2);
+    \end{circuitikz}
+    \caption{LCR Circuit}
+    \label{fig:enter-label}
+\end{figure}
+
+\textbf{Frequency Response of the Circuit}
+
+This is a series LCR circuit, with the elements in series with the voltage source. Applying Kirchhoff's Voltage Law (KVL), we get:
+
+\begin{equation}
+V_R + V_L + V_C = V(t)
+\end{equation}
+
+where $V_R$, $V_L$ and $V_C$ are the voltages across R, L and C respectively and $V(t)$ is the time-varying voltage source.\\
+\\
+Substituting,
+\begin{equation}
+    V_R = R\cdot I(t)
+\end{equation}
+\begin{equation}
+    V_L = L\dfrac{dI(t)}{dt}
+\end{equation}
+\begin{equation}
+    V_C = V(0) + \dfrac{1}{C}\int_{0}^{t}I(\tau)\, d\tau
+\end{equation}
+
+\noindent into equation (10), we get:
+
+\begin{equation}
+    R\cdot I(t) + L\dfrac{dI(t)}{dt} + V(0) + \dfrac{1}{C}\int_{0}^{t}I(\tau)\, d\tau = V(t)
+\end{equation}
+
+The response of the circuit can be analysed at the transient and steady state by using the Laplace Transform.\\
+\\
+The Laplace Transform $F(s)$ of a function $f(t)$, defined for all real $t > 0$, is defined by
+
+\begin{equation}
+    \mathcal{L}\{f\} = F(s) = \int_{0}^{\infty}f(t)\mathrm{e}^{-st}dt
+\end{equation}
+
+where s is a complex frequency domain parameter, i.e. $s = \alpha + \iota\omega$ ($\alpha, \omega \in \mathbf{R}$)
+
+Applying the Laplace Transform to equation (14), we get
+
+\begin{equation}
+    V(s) = I(s)\left(R + Ls + \dfrac{1}{sC}\right)
+\end{equation}
+
+\begin{equation}
+    \Rightarrow I(s) = \dfrac{V(s)}{\left(R + Ls + \dfrac{1}{sC}\right)}
+\end{equation}
+
+The term $\dfrac{I(s)}{V(s)}$ is called the Laplace Admittance Y(s).
+
+\begin{equation}
+     \Rightarrow Y(s) = \dfrac{I(s)}{V(s)} = \dfrac{s}{L\left(s^2 + \dfrac{R}{L}s + \dfrac{1}{LC}\right)}
+\end{equation}
+
+We now define two terms: Neper Frequency ($\alpha$) and Angular Resonance Frequency ($\omega_0$).
+
+Neper Frequency or Attenuation is a measure of how fast the transient response of a circuit will die out after the source has been removed.\\
+\\
+For a series LCR circuit,
+
+\begin{equation}
+    \alpha = \dfrac{R}{2L}
+\end{equation}
+
+\begin{equation}
+    \omega_0 = \dfrac{1}{\sqrt{LC}}
+\end{equation}
+Equation (18) can then be written as
+
+\begin{equation}
+    Y(s) = \dfrac{s}{L\left(s^2 + 2\alpha s + \omega_0^2\right)}
+\end{equation}
+The poles of Y(s) are the values of s for which $Y(s) \rightarrow \infty$, i.e.
+
+\begin{equation}
+    s^2 + 2\alpha s + \omega_0^2 = 0
+\end{equation}
+
+\begin{equation}
+    \Rightarrow s = -\alpha \pm \sqrt{\alpha^2 - \omega_0^2}
+\end{equation}
+which are identical to the roots of the characteristic equation of equation (14).\\
+\\
+For the given values of R, L and C we get
+\begin{equation}
+    \alpha = \dfrac{R}{2L} = 1.234\,  s^{-1}
+\end{equation}
+
+\begin{equation}
+    \omega_0 = \dfrac{1}{\sqrt{LC}} = 111.12\, s^{-1}
+\end{equation}
+
+As $\omega_0>\alpha$, values of s are imaginary. The frequency response of this circuit is therefore underdamped. The solution for $I(t)$ is given by inverse Laplace transform of $I(s)$:
+
+\begin{equation}
+    I(t) = \dfrac{1}{L}\int_{0}^{t}V(t-\tau)\mathrm{e}^{-\alpha\tau}\left[\cosh(\omega_d \tau) - \dfrac{\alpha}{\omega_d}\sinh(\omega_d \tau)\right]d\tau
+\end{equation}
+where $\omega_d = \sqrt{\omega_0^2 - \alpha^2} = 111.11\, s^{-1}$ is the damped frequency of oscillation.\\
+\\
+The integral yields the transient response:
+\begin{equation}
+    I(t) = \mathrm{e}^{-\alpha t}\left[B_1\cos(\omega_d t) + B_2\sin(\omega_d t)\right]
+\end{equation}
+ 
+where $B_1$ and $B_2$ are constants. Substituting $\alpha = 1.234\, s^{-1}$ and $\omega_d = 111.11\, s^{-1}$ we get
+
+\begin{equation}
+    I(t) = \mathrm{e}^{-1.234t}\left[B_1\cos(111.11t) + B_2\sin(111.11t)\right]
+\end{equation}
+where t is in seconds.
+Constants $B_1$ and $B_2$ can be determined by the initial conditions of the given circuit. 
+
+The steady-state response of the circuit will depend on the nature of input $V(t)$. The transient and steady-state responses of the circuit can be added to give the net equation of $I(t)$.
+
+The current $I(t)$ will fluctuate in a sinusoidal manner and decay over time. The frequency response of the circuit is underdamped response.
+
+
 
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
