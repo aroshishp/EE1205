@@ -81,28 +81,20 @@ Given parameters are:
     \label{fig:enter-label}
 \end{figure}
 
-\textbf{Frequency Response of the Circuit}
+\begin{enumerate}
+\item {Frequency Response of the Circuit}
 
-Applying Kirchhoff's Voltage Law (KVL), we get:
-
+From Kirchhoff's Voltage Law (KVL):
 \begin{equation}
-V_R + V_L + V_C = V(t) \label{eq:KVL}
+V(t) = V_R + V_L + V_C \label{eq:KVL}
 \end{equation}
-where $V_R$, $V_L$ and $V_C$ are the voltages across R, L and C respectively and $V(t)$ is the time-varying voltage source.\\
-\\
-Elements and their corresponding reactances are given in the table below where $s$ is a complex variable.\\
 
-\begin{table}[h]
-    \centering
-    \resizebox{7 cm}{!}{
-    \input{tables/table2}
-    }
-    \vspace{6 pt}
-    \caption{Reactances}
-    \label{tab:2} 
-\end{table}
-
-The circuit can now be redrawn as:\\
+Using reactances from \figref{fig:2},
+\begin{align}
+    V(s) &= R I(s) + sL I(s) + \dfrac{1}{sC} I(s)\\
+    \Rightarrow V(s) &= I(s)\left(R + Ls + \dfrac{1}{sC}\right)\\
+    \Rightarrow I(s) &= \dfrac{V(s)}{\left(R + Ls + \dfrac{1}{sC}\right)} \label{eq: 4}
+\end{align}
 
 \begin{figure}[h]
  \centering
@@ -110,20 +102,6 @@ The circuit can now be redrawn as:\\
     \caption{LCR Circuit}
     \label{fig:2}
 \end{figure}
-
-Using the reactances of R, L and C from TABLE \ref{tab:2} in equation \eqref{eq:KVL}, we get
-
-\begin{equation}
-    V(s) = R I(s) + sL I(s) + \dfrac{1}{sC} I(s)
-\end{equation}
-
-\begin{equation}
-    \Rightarrow V(s) = I(s)\left(R + Ls + \dfrac{1}{sC}\right)
-\end{equation}
-
-\begin{equation}
-    \Rightarrow I(s) = \dfrac{V(s)}{\left(R + Ls + \dfrac{1}{sC}\right)} \label{eq: 4}
-\end{equation}
 
 At resonance, the circuit becomes purely resistive. The reactances of capacitor and inductor cancel out as follows:
 
@@ -145,25 +123,19 @@ Comparing equations \eqref{eq: 6} and \eqref{eq: 7}, we get
 
 \begin{equation}
     \omega_0 = \dfrac{1}{\sqrt{LC}}
-\end{equation}\\
-\\
-\textbf{Quality Factor}
+\end{equation}
+
+\item{Quality Factor}
 
 Quality Factor ($Q$) of an LCR circuit is defined as the ratio of voltage across inductor or capacitor to that across the resistor at resonance.
 
-\begin{equation}
-    Q = \left(\dfrac{V_L}{V_R}\right)_{\omega_0} = \dfrac{\lvert{sLI(s)}\rvert}{\lvert RI(s) \rvert}
-\end{equation}
-
-\begin{equation}
-    \Rightarrow Q = \dfrac{1}{\sqrt{LC}}\dfrac{L}{R}
-\end{equation}
-
-\begin{equation}
-    \Rightarrow Q = \dfrac{1}{R}\sqrt{\dfrac{L}{C}}
-\end{equation}\\
+\begin{align}
+    Q &= \left(\dfrac{V_L}{V_R}\right)_{\omega_0} = \dfrac{\lvert{sLI(s)}\rvert}{\lvert RI(s) \rvert}\\
+    \Rightarrow Q &= \dfrac{1}{\sqrt{LC}}\dfrac{L}{R}\\
+    \Rightarrow Q &= \dfrac{1}{R}\sqrt{\dfrac{L}{C}}
+\end{align}\\
 \\
-\textbf{Plot of Impedance vs Angular Frequency}
+\item{Plot of Impedance vs Angular Frequency}
 
 Impedance is defined as
 
@@ -172,18 +144,11 @@ Impedance is defined as
 \end{equation}
 
 Using equation \eqref{eq: 4},
-
-\begin{equation}
-    H(s) = R + sL + \dfrac{1}{sC}
-\end{equation}
-
-\begin{equation}
-    \Rightarrow H(j\omega) = R + j\omega L + \dfrac{1}{j\omega C}
-\end{equation}
-
-\begin{equation}
-    \Rightarrow \lvert H(j\omega) \rvert = \sqrt{R^2 + \left(\omega L - \dfrac{1}{\omega C}\right)^2}
-\end{equation}
+\begin{align}
+     H(s) &= R + sL + \dfrac{1}{sC}\\
+     \Rightarrow H(j\omega) &= R + j\omega L + \dfrac{1}{j\omega C}\\
+     \Rightarrow \lvert H(j\omega) \rvert &= \sqrt{R^2 + \left(\omega L - \dfrac{1}{\omega C}\right)^2}
+\end{align}
 
 \begin{figure}[h]
     \centering
@@ -192,7 +157,8 @@ Using equation \eqref{eq: 4},
     \label{fig:h_plot}
 \end{figure}
 
+\end{enumerate}
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 
-\end{document}	
+\end{document}
