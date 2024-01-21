@@ -55,79 +55,90 @@
 \maketitle
 \newpage
 \bigskip
-\textbf{Question:} The vertices of $\Delta PQR$ are $P(2, 1)$, $Q(-2, 3)$ and $R(4, 5)$. Find equation of the median through the vertex $R$.\\
+\textbf{Question:} If the sum of $n$ terms of an AP is $(pn + qn^2)$, where $p$ and $q$ are constants, find the common difference.\\
 
 \solution
 \begin{table}[!h]
     \centering
-    \input{tables/table1.tex}
+    \input{tables/table1}
     \caption{Given Parameters}
     \label{tab:1}
 \end{table}
+
+Sum of $n$ terms, as a discrete signal:
+\begin{equation}
+    s(n) = (pn + qn^2)u(n)
+\end{equation}
+
+Taking the $Z$-Transform,
+\begin{align}
+    s(n) &\overset{z}{\longleftrightarrow} S(z)\\
+    \implies S(z) &= \sum_{n = - \infty}^{\infty}s(n)z^{-n}\\
+    &= \sum_{n = - \infty}^{\infty}(pn + qn^2)u(n)z^{-n}\\
+    &= p\sum_{n = -\infty}^{\infty}nu(n)z^{-n} + q\sum_{n = -\infty}^{\infty}n^2u(n)z^{-n}\\
+    &= p\left(\dfrac{z^{-1}}{(1-z^{-1})^2}\right) + q\left(\dfrac{z^{-1}(1 + z^{-1}).}{(1-z^{-1})^3}\right)
+\end{align}
+
+where $\{z\in \mathbb{C}: \abs{z} > 1\}$
+
+Now, 
+\begin{align}
+    s(n) &= x(n) \ast u(n)\\
+    \implies S(z) &= X(z)U(z)\\
+    \implies X(z) &= \dfrac{S(z)}{U(z)}\label{eq:9}
+\end{align}
+
+where,
+\begin{align}
+    U(z) &= \mathcal{Z}(u(n))\\
+    &= \dfrac{1}{1 - z^{-1}}\label{eq:11}
+\end{align}
+
+for $\{z\in \mathbb{C}: \abs{z} > 1\}$
+
+Using \eqref{eq:11} in \eqref{eq:9},
+\begin{align}
+    X(z) &= p\left(\dfrac{z^{-1}}{(1-z^{-1})}\right) + q\left(\dfrac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^2}\right)
+\end{align}
+
+Simplifying using partial fractions, we get:
+\begin{align}
+    X(z) &= (q-p) + \dfrac{p-3q}{1-z^{-1}} + \dfrac{2q}{(1-z^{-1})^2}\\
+    &= (q - p) + \dfrac{(p-q)}{1-z^{-1}} + \dfrac{2qz^{-1}}{(1-z^{-1})^2}
+\end{align}
+
+Taking the inverse Z-Transform,
+\begin{align}
+    x(n) = (q-p)\delta(n) + (p-q)u(n) + 2qnu(n)\label{eq:15}
+\end{align}
+\\
+To simplify, use $n=0$:
+\begin{equation}
+    s(0) = x(0) = 0
+\end{equation}
+\begin{align}
+    &\implies (q-p)\delta(0) + (p-q)u(0) + 2qnu(0) = 0\\
+    &\implies p = q
+\end{align}
+
+because $\delta(0) \rightarrow \infty$
+
+$\therefore$ rewriting \eqref{eq:15}:
+\begin{equation}
+    x(n) = 2qnu(n)
+\end{equation}
+
+Common difference is given by:
+\begin{align}
+    d &= x(n+1) - x(n)\\
+    &= 2q(n+1)u(n+1) - 2qnu(n)\\
+    &= 2q
+\end{align}
+
 \begin{figure}[!h]
     \centering
-    \input{figs/tri.tex}
-    \caption{$\Delta PQR$}
+    \includegraphics[width = \columnwidth]{figs/x_plot.png}
+    \caption{Plot of x(n) vs n}
     \label{fig:1}
 \end{figure}
-
-Coordinates of mid-point $M$ of $PQ$ are given by:
-\begin{align}
-    (x_M, y_M) &= \left(\dfrac{x_P + x_Q}{2}, \dfrac{y_P + y_Q}{2}\right)\\
-    &= (0, 2)
-\end{align}
-$\therefore$ equation of median $RM$:
-\begin{align}
-    y-2 &= \left(\dfrac{5-2}{4-0}\right)(x-0)\\
-    \implies y &= \dfrac{3}{4} x + 2
-\end{align}
-\begin{enumerate}
-\item Plotting the discrete signal:
-    \begin{equation}
-        x(n) = \left(\dfrac{3}{4} n + 2\right) u(n)
-    \end{equation}
-    where,
-    \begin{equation}
-        u(n) = \begin{cases}
-                    0 & :n<0\\
-                    1 & :n \geq 0
-               \end{cases}
-    \end{equation}
-    \begin{figure}[!h]
-        \centering
-        \includegraphics[width = \columnwidth]{figs/fig2.png}
-        \caption{Plot of x(n)}
-        \label{fig:2}
-    \end{figure}
-\item Z-Transform of $x(n)$
-    \begin{align}
-        x(n) &\overset{z}{\longleftrightarrow} X(z)\\  
-        \implies X(z) &= \mathcal{Z}\{x(n)\} = \sum_{n=-\infty}^{\infty} x(n)z^{-n}\\
-        &= \sum_{n=-\infty}^{\infty} \left(\frac{3}{4}n + 2\right)u(n)z^{-n}\\
-        &= \frac{3}{4}\sum_{n=0}^{\infty}nz^{-n} + 2 \sum_{n=0}^{\infty}z^{-n}\\
-        &= \frac{3}{4}S_2 + 2 S_1\label{eq:11}
-    \end{align}
-    Solving the summations:
-    \begin{enumerate}
-        \item $S_1$
-            \begin{align}
-                S_1 &= \sum_{n=0}^{\infty} z^{-n}\label{eq:12}\\
-                &= \dfrac{1}{1-z^{-1}}\label{eq:13}
-            \end{align}
-        \item $S_2$
-        
-            From \eqref{eq:12} and \eqref{eq:13},
-            \begin{align}
-                \sum_{n=0}^{\infty} z^{-n} &= \dfrac{1}{1-z^{-1}}\\
-                \implies \dfrac{d}{dz}\left(\sum_{n=0}^{\infty} z^{-n}\right) &= \dfrac{d}{dz}\left(\dfrac{1}{1-z^{-1}}\right)\\
-                \implies \sum_{n=0}^{\infty} -n z^{-n-1} &= \dfrac{-z^{-2}}{1-z^{-1}}\\
-                \implies S_2 = \sum_{n=0}^{\infty} n z^{-n} &= \dfrac{z^{-1}}{(1-z^{-1})^2}\label{eq:16}
-            \end{align}
-    \end{enumerate}
-    Using \eqref{eq:13} and \eqref{eq:16} in \eqref{eq:11}
-    \begin{align}
-        X(z) = \dfrac{3}{4}\dfrac{z^{-1}}{(1-z^{-1})^2} + \dfrac{2}{1-z^{-1}}
-    \end{align}
-    where $\{z\in \mathbb{C} : \abs{z} > 1 \}$
-\end{enumerate}
 \end{document}
