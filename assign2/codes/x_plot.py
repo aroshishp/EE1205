@@ -1,13 +1,10 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def x(n, q):
-    return 2 * q * n * (n >= 0)
-
 q = 0.5
 
 n_values = np.arange(-6, 7, 1)
-x_values = x(n_values, q)
+x_values = 2 * q * n_values * (n_values >= 0)
 
 plt.stem(n_values, x_values, linefmt='b-', markerfmt='bo', basefmt='r')
 plt.title('Plot of x(n) vs n')

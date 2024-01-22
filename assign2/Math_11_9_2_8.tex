@@ -72,39 +72,38 @@ Sum of $n$ terms, as a discrete signal:
 
 Taking the $Z$-Transform,
 \begin{align}
-    s(n) &\overset{z}{\longleftrightarrow} S(z)\\
+    s(n) &\system{Z} S(z)\\
     \implies S(z) &= \sum_{n = - \infty}^{\infty}s(n)z^{-n}\\
     &= \sum_{n = - \infty}^{\infty}(pn + qn^2)u(n)z^{-n}\\
     &= p\sum_{n = -\infty}^{\infty}nu(n)z^{-n} + q\sum_{n = -\infty}^{\infty}n^2u(n)z^{-n}\\
-    &= p\left(\dfrac{z^{-1}}{(1-z^{-1})^2}\right) + q\left(\dfrac{z^{-1}(1 + z^{-1}).}{(1-z^{-1})^3}\right)
+      &= p\brak{\frac{z^{-1}}{(1-z^{-1})^2}} + q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^3}}
 \end{align}
 
-where $\{z\in \mathbb{C}: \abs{z} > 1\}$
+$\{\abs{z} > 1\}$
 
 Now, 
 \begin{align}
     s(n) &= x(n) \ast u(n)\\
     \implies S(z) &= X(z)U(z)\\
-    \implies X(z) &= \dfrac{S(z)}{U(z)}\label{eq:9}
+    \implies X(z) &= \frac{S(z)}{U(z)}\label{eq:9}
 \end{align}
 
 where,
 \begin{align}
-    U(z) &= \mathcal{Z}(u(n))\\
-    &= \dfrac{1}{1 - z^{-1}}\label{eq:11}
+    U(z) &= \frac{1}{1 - z^{-1}}\label{eq:10}
 \end{align}
 
-for $\{z\in \mathbb{C}: \abs{z} > 1\}$
+$\{\abs{z} > 1\}$
 
-Using \eqref{eq:11} in \eqref{eq:9},
+Using \eqref{eq:10} in \eqref{eq:9},
 \begin{align}
-    X(z) &= p\left(\dfrac{z^{-1}}{(1-z^{-1})}\right) + q\left(\dfrac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^2}\right)
+    X(z) &= p\brak{\frac{z^{-1}}{(1-z^{-1})}} + q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^2}}
 \end{align}
 
 Simplifying using partial fractions, we get:
 \begin{align}
-    X(z) &= (q-p) + \dfrac{p-3q}{1-z^{-1}} + \dfrac{2q}{(1-z^{-1})^2}\\
-    &= (q - p) + \dfrac{(p-q)}{1-z^{-1}} + \dfrac{2qz^{-1}}{(1-z^{-1})^2}
+    X(z) &= (q-p) + \frac{p-3q}{1-z^{-1}} + \frac{2q}{(1-z^{-1})^2}\\
+    &= (q - p) + \frac{(p-q)}{1-z^{-1}} + \frac{2qz^{-1}}{(1-z^{-1})^2}
 \end{align}
 
 Taking the inverse Z-Transform,
@@ -121,7 +120,7 @@ To simplify, use $n=0$:
     &\implies p = q
 \end{align}
 
-because $\delta(0) \rightarrow \infty$
+because $\delta(0) = 1$ and $u(0) = 0$
 
 $\therefore$ rewriting \eqref{eq:15}:
 \begin{equation}
