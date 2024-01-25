@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.2)  22 JAN 2024 06:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.1.2)  25 JAN 2024 10:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1319,15 +1319,11 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
-
- []
-
 (./tables/table1.tex)
-<figs/x_plot.png, id=10, 462.528pt x 346.896pt>
+<figs/x_plot.png, id=14, 462.528pt x 346.896pt>
 File: figs/x_plot.png Graphic file (type png)
 <use figs/x_plot.png>
-Package pdftex.def Info: figs/x_plot.png  used on input line 139.
+Package pdftex.def Info: figs/x_plot.png  used on input line 141.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
 
@@ -1344,10 +1340,10 @@ Package rerunfilecheck Info: File `Math_11_9_2_8.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31754 strings out of 476091
- 625120 string characters out of 5794082
- 1885330 words of memory out of 5000000
- 51435 multiletter control sequences out of 15000+600000
+ 31763 strings out of 476091
+ 625216 string characters out of 5794082
+ 1888330 words of memory out of 5000000
+ 51441 multiletter control sequences out of 15000+600000
  592130 words of font info for 206 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,11n,96p,1181b,436s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1359,10 +1355,10 @@ onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Math_11_9_2_8.pdf (2 pages, 65988 bytes).
+Output written on Math_11_9_2_8.pdf (2 pages, 64944 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 500000)
+ 102 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
+ 29 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

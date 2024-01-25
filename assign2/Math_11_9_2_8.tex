@@ -55,7 +55,7 @@
 \maketitle
 \newpage
 \bigskip
-\textbf{Question:} If the sum of $n$ terms of an AP is $(pn + qn^2)$, where $p$ and $q$ are constants, find the common difference.\\
+\textbf{Question:} If the sum of $n$ terms of an AP is $(pn + qn^2)$, where $p$ and $q$ are constants, find the common difference.
 
 \solution
 \begin{table}[!h]
@@ -67,50 +67,55 @@
 
 Sum of $n$ terms, as a discrete signal:
 \begin{equation}
-    s(n) = (pn + qn^2)u(n)
+    s(n) = (pn + qn^2)u(n) \label{eq:1}
 \end{equation}
-
 Taking the $Z$-Transform,
+\begin{enumerate}
+    \item $\mathcal{Z}\{nu(n)\}$
+
+Using GP summation, 
 \begin{align}
-    s(n) &\system{Z} S(z)\\
-    \implies S(z) &= \sum_{n = - \infty}^{\infty}s(n)z^{-n}\\
-    &= \sum_{n = - \infty}^{\infty}(pn + qn^2)u(n)z^{-n}\\
-    &= p\sum_{n = -\infty}^{\infty}nu(n)z^{-n} + q\sum_{n = -\infty}^{\infty}n^2u(n)z^{-n}\\
-      &= p\brak{\frac{z^{-1}}{(1-z^{-1})^2}} + q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^3}}
+    \sum_{n = 0}^{\infty} z^{-n} &= \frac{1}{1 - z^{-1}}\\
+    nu(n) &\system{Z} -zU'(z)\label{eq:3} \\ 
+    \implies \sum_{n = 0}^{\infty} nz^{-n} &= \frac{z^{-1}}{(1-z^{-1})^2}\, \{\abs{z} > 1\} \label{eq:4}
 \end{align}
+\item $\mathcal{Z}{\{n^2 u(n)\}}$
 
-$\{\abs{z} > 1\}$
-
+From \eqref{eq:3},
+    \begin{align}
+        % \frac{d}{dz}\brak{\sum_{n = 0}^{\infty} nz^{-n}} &= \frac{d}{dz}\brak{ \frac{z^{-1}}{(1-z^{-1})^2}}\\
+        % \implies \sum_{n = 0}^{\infty} -n^2 z^{-n-1} &= \frac{-z^{-2}(1+z^{-1})}{(1-z^{-1})^3}\\
+        n^2 u(n) &\system{Z} -z\brak{\mathcal{Z}\{nu(n)\}}'\\
+        \implies \sum_{n = 0}^{\infty} n^2 z^{-n} &= \frac{z^{-1}(1+z^{-1})}{(1-z^{-1})^3}\, \{\abs{z} > 1\} \label{eq:6}
+    \end{align}
+\end{enumerate}
+Taking the Z-Transform of \eqref{eq:1} using \eqref{eq:4} and \eqref{eq:6}
+\begin{align}
+      S(z) = p\brak{\frac{z^{-1}}{(1-z^{-1})^2}} + q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^3}}
+\end{align}
 Now, 
 \begin{align}
     s(n) &= x(n) \ast u(n)\\
     \implies S(z) &= X(z)U(z)\\
-    \implies X(z) &= \frac{S(z)}{U(z)}\label{eq:9}
+    \implies X(z) &= \frac{S(z)}{U(z)}\label{eq:12}
 \end{align}
-
 where,
 \begin{align}
-    U(z) &= \frac{1}{1 - z^{-1}}\label{eq:10}
+    U(z) &= \frac{1}{1 - z^{-1}}\label{eq:13}
 \end{align}
-
-$\{\abs{z} > 1\}$
-
-Using \eqref{eq:10} in \eqref{eq:9},
+Using \eqref{eq:13} in \eqref{eq:12},
 \begin{align}
     X(z) &= p\brak{\frac{z^{-1}}{(1-z^{-1})}} + q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^2}}
 \end{align}
-
 Simplifying using partial fractions, we get:
 \begin{align}
     X(z) &= (q-p) + \frac{p-3q}{1-z^{-1}} + \frac{2q}{(1-z^{-1})^2}\\
     &= (q - p) + \frac{(p-q)}{1-z^{-1}} + \frac{2qz^{-1}}{(1-z^{-1})^2}
 \end{align}
-
 Taking the inverse Z-Transform,
 \begin{align}
     x(n) = (q-p)\delta(n) + (p-q)u(n) + 2qnu(n)\label{eq:15}
 \end{align}
-\\
 To simplify, use $n=0$:
 \begin{equation}
     s(0) = x(0) = 0
@@ -119,25 +124,22 @@ To simplify, use $n=0$:
     &\implies (q-p)\delta(0) + (p-q)u(0) + 2qnu(0) = 0\\
     &\implies p = q
 \end{align}
-
 because $\delta(0) = 1$ and $u(0) = 0$
 
 $\therefore$ rewriting \eqref{eq:15}:
 \begin{equation}
     x(n) = 2qnu(n)
 \end{equation}
-
 Common difference is given by:
 \begin{align}
     d &= x(n+1) - x(n)\\
     &= 2q(n+1)u(n+1) - 2qnu(n)\\
     &= 2q
 \end{align}
-
 \begin{figure}[!h]
     \centering
     \includegraphics[width = \columnwidth]{figs/x_plot.png}
-    \caption{Plot of x(n) vs n}
+    \caption{Plot of x(n) vs n for $p=q=0.5$}
     \label{fig:1}
 \end{figure}
 \end{document}
