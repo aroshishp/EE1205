@@ -66,9 +66,9 @@
 \end{table}
 
 Sum of $n$ terms, as a discrete signal:
-\begin{equation}
+\begin{align}
     s(n) = (pn + qn^2)u(n) \label{eq:1}
-\end{equation}
+\end{align}
 Taking the $Z$-Transform,
 \begin{enumerate}
     \item $\mathcal{Z}\{nu(n)\}$
@@ -116,30 +116,28 @@ Taking the inverse Z-Transform,
 \begin{align}
     x(n) = (q-p)\delta(n) + (p-q)u(n) + 2qnu(n)\label{eq:15}
 \end{align}
-To simplify, use $n=0$:
-\begin{equation}
-    s(0) = x(0) = 0
-\end{equation}
+To simplify, use first term:
 \begin{align}
-    &\implies (q-p)\delta(0) + (p-q)u(0) + 2qnu(0) = 0\\
-    &\implies p = q
+    s(1) &= x(0)\\
+    \implies p + q &= (q-p)\delta(0) + (p-q)u(0) + 2qnu(0)\\
+    \implies p &= -q
 \end{align}
-because $\delta(0) = 1$ and $u(0) = 0$
+because $\delta(0) = 1$ and $u(0) = 1$
 
 $\therefore$ rewriting \eqref{eq:15}:
-\begin{equation}
-    x(n) = 2qnu(n)
-\end{equation}
+\begin{align}
+    x(n) = 2q((n-1)u(n) + \delta(n))
+\end{align}
 Common difference is given by:
 \begin{align}
     d &= x(n+1) - x(n)\\
-    &= 2q(n+1)u(n+1) - 2qnu(n)\\
+    &= 2q(nu(n+1) + \delta(n+1)) - 2q((n-1)u(n) + \delta(n))\\
     &= 2q
 \end{align}
 \begin{figure}[!h]
     \centering
     \includegraphics[width = \columnwidth]{figs/x_plot.png}
-    \caption{Plot of x(n) vs n for $p=q=0.5$}
+    \caption{Plot of x(n) vs n for $q=0.5$}
     \label{fig:1}
 \end{figure}
 \end{document}
