@@ -107,37 +107,48 @@ Using \eqref{eq:13} in \eqref{eq:12},
 \begin{align}
     X(z) &= p\brak{\frac{z^{-1}}{(1-z^{-1})}} + q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^2}}
 \end{align}
-Simplifying using partial fractions, we get:
+Using contour integration for inverse Z-Transform:
 \begin{align}
-    X(z) &= (q-p) + \frac{p-3q}{1-z^{-1}} + \frac{2q}{(1-z^{-1})^2}\\
-    &= (q - p) + \frac{(p-q)}{1-z^{-1}} + \frac{2qz^{-1}}{(1-z^{-1})^2}
+    x(n) &= \frac{1}{2\pi j} \oint_C X(z) z^{n-1}dz\\
+    &= \frac{1}{2 \pi j} \oint_C  \brak{p\brak{\frac{z^{-1}}{(1-z^{-1})}} + q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^2}}}z^{n-1}dz\\
+    R_m &= \frac{1}{(m-1)!} \lim_{z \to a} \frac{d^{m-1}}{dz^{m-1}}((z-a)^mf(z))
 \end{align}
-Taking the inverse Z-Transform,
+For first term, pole ($z = 1$) is repeated once so $m=1$
 \begin{align}
-    x(n) = (q-p)\delta(n) + (p-q)u(n) + 2qnu(n)\label{eq:15}
+    \implies R_1 &= \frac{1}{0!} \lim_{z \to 1}(z-1)\brak{p\brak{\frac{z^{-1}}{1-z^{-1}}}}z^{n-1}\\
+    &= p
 \end{align}
-To simplify, use first term:
+For second term, pole ($z = 1$) is repeated twice so $m=2$
 \begin{align}
-    s(1) &= x(0)\\
-    \implies p + q &= (q-p)\delta(0) + (p-q)u(0) + 2qnu(0)\\
-    \implies p &= -q
+    \implies R_2 &= \frac{1}{1!} \lim_{z \to 1}\frac{d}{dz}\brak{(z-1)^2q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^2}}}z^{n-1}\\
+    &= q\lim_{z \to 1}\frac{d}{dz}\brak{z^{n} + z^{n-1}}\\
+    &= q(2n-1)\\
+    \implies x(n) &= R_1 + R_2\\
+    &= p + q(2n-1)
 \end{align}
-because $\delta(0) = 1$ and $u(0) = 1$
-
-$\therefore$ rewriting \eqref{eq:15}:
+Writing x(n) as a discrete signal we get:
 \begin{align}
-    x(n) = 2q((n-1)u(n) + \delta(n))
+    x(n) &= (p-q)u(n) + 2qnu(n)\label{eq:23}
+\end{align}
+To simplify, use $n=0$:
+\begin{align}
+    s(0)&=x(0)\\
+    \implies 0 &= (p-q)u(0) +2q(0)u(0)\\
+    \implies p &= q
+\end{align}
+$\therefore$ \eqref{eq:23} can be written as:
+\begin{align}
+    x(n) &= 2qnu(n)
 \end{align}
 Common difference is given by:
 \begin{align}
     d &= x(n+1) - x(n)\\
-    &= 2q(nu(n+1) + \delta(n+1)) - 2q((n-1)u(n) + \delta(n))\\
     &= 2q
 \end{align}
 \begin{figure}[!h]
     \centering
     \includegraphics[width = \columnwidth]{figs/x_plot.png}
-    \caption{Plot of x(n) vs n for $q=0.5$}
+    \caption{Plot of x(n) vs n for $p=q=0.5$}
     \label{fig:1}
 \end{figure}
 \end{document}

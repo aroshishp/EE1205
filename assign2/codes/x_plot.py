@@ -1,22 +1,15 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
-# Function to calculate x(n)
-def x_n(n, q):
-    u_n = 1 if n >= 0 else 0
-    delta_n = 1 if n == 0 else 0
-    return 2 * q * ((n - 1) * u_n + delta_n)
+#set p = q = 0.5
+q = 0.5
 
-# Value for q
-q_value = 0.5
-
-# Range of n from -6 to 6
+#create discrete values of n
 n_values = np.arange(-6, 7, 1)
+#create corresponding vlaues of x(n)
+x_values = 2 * q * n_values * (n_values >= 0)
 
-# Calculate x(n) for each value of n
-x_values = [x_n(n, q_value) for n in n_values]
-
-# Plotting
+#create stem plot
 plt.stem(n_values, x_values, linefmt='b-', markerfmt='bo', basefmt='r')
 plt.xlabel('n')
 plt.ylabel('x(n)')
