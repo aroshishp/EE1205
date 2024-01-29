@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 
 int main()
 {
@@ -16,7 +17,7 @@ int main()
     //Generate x_values using x = 2qnu(n)
     for(int i = 0; i < 13; i++)
     {
-        x_values[i] =  (2 * q * n_values[i]) * (n_values[i] > 0);
+        x_values[i] =  (2 * q * fabs(n_values[i])) * (n_values[i] > 0);
     }
 
     // //Save n_values and x_values in nx_values.dat
