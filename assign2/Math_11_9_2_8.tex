@@ -110,17 +110,13 @@ Using \eqref{eq:13} in \eqref{eq:12},
 Using contour integration for inverse Z-Transform:
 \begin{align}
     x(n) &= \frac{1}{2\pi j} \oint_C X(z) z^{n-1}dz\\
-    &= \frac{1}{2 \pi j} \oint_C  \brak{p\brak{\frac{z^{-1}}{(1-z^{-1})}} + q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^2}}}z^{n-1}dz\\
-    R_m &= \frac{1}{(m-1)!} \lim_{z \to a} \frac{d^{m-1}}{dz^{m-1}}((z-a)^mf(z))
+    &= \frac{1}{2 \pi j} \oint_C  \brak{p\brak{\frac{z^{-1}}{(1-z^{-1})}} + q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^2}}}z^{n-1}dz
 \end{align}
-For first term, pole ($z = 1$) is repeated once so $m=1$
+Calculating the residues $R_1$ and $R_2$ at pole $z=1$:
 \begin{align}
-    \implies R_1 &= \frac{1}{0!} \lim_{z \to 1}(z-1)\brak{p\brak{\frac{z^{-1}}{1-z^{-1}}}}z^{n-1}\\
-    &= p
-\end{align}
-For second term, pole ($z = 1$) is repeated twice so $m=2$
-\begin{align}
-    \implies R_2 &= \frac{1}{1!} \lim_{z \to 1}\frac{d}{dz}\brak{(z-1)^2q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^2}}}z^{n-1}\\
+    R_1 &= \frac{1}{0!} \lim_{z \to 1}(z-1)\brak{p\brak{\frac{z^{-1}}{1-z^{-1}}}}z^{n-1}\\
+    &= p\\
+    R_2 &= \frac{1}{1!} \lim_{z \to 1}\frac{d}{dz}\brak{(z-1)^2q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^2}}}z^{n-1}\\
     &= q\lim_{z \to 1}\frac{d}{dz}\brak{z^{n} + z^{n-1}}\\
     &= q(2n-1)\\
     \implies x(n) &= R_1 + R_2\\
@@ -128,7 +124,7 @@ For second term, pole ($z = 1$) is repeated twice so $m=2$
 \end{align}
 Writing x(n) as a discrete signal we get:
 \begin{align}
-    x(n) &= (p-q)u(n) + 2qnu(n)\label{eq:23}
+    x(n) &= (p-q)u(n) + 2qnu(n)\label{eq:22}
 \end{align}
 To simplify, use $n=0$:
 \begin{align}
@@ -136,7 +132,7 @@ To simplify, use $n=0$:
     \implies 0 &= (p-q)u(0) +2q(0)u(0)\\
     \implies p &= q
 \end{align}
-$\therefore$ \eqref{eq:23} can be written as:
+$\therefore$ \eqref{eq:22} can be written as:
 \begin{align}
     x(n) &= 2qnu(n)
 \end{align}
