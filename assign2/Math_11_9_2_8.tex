@@ -67,50 +67,41 @@
 
 Sum of $n$ terms, as a discrete signal:
 \begin{align}
-    s(n) = (pn + qn^2)u(n) \label{eq:1}
+    y(n) = (pn + qn^2)u(n) \label{eq:1}
 \end{align}
 Taking the $Z$-Transform,
 \begin{enumerate}
-    \item $\mathcal{Z}\{nu(n)\}$
-
-Using GP summation, 
+    \item $\mathcal{Z}\{u(n)\}$
 \begin{align}
-    \sum_{n = 0}^{\infty} z^{-n} &= \frac{1}{1 - z^{-1}}\\
-    nu(n) &\system{Z} -zU'(z)\label{eq:3} \\ 
-    \implies \sum_{n = 0}^{\infty} nz^{-n} &= \frac{z^{-1}}{(1-z^{-1})^2}\, \{\abs{z} > 1\} \label{eq:4}
+    u(n) \system{Z} \frac{1}{1-z^{-1}} \{\abs{z} > 1\} \label{eq:2}
+\end{align}
+    \item $\mathcal{Z}\{nu(n)\}$
+\begin{align}
+    nu(n) \system{Z} \frac{z^{-1}}{(1-z^{-1})^2}\, \{\abs{z} > 1\} \label{eq:3}
 \end{align}
 \item $\mathcal{Z}{\{n^2 u(n)\}}$
-
-From \eqref{eq:3},
     \begin{align}
-        % \frac{d}{dz}\brak{\sum_{n = 0}^{\infty} nz^{-n}} &= \frac{d}{dz}\brak{ \frac{z^{-1}}{(1-z^{-1})^2}}\\
-        % \implies \sum_{n = 0}^{\infty} -n^2 z^{-n-1} &= \frac{-z^{-2}(1+z^{-1})}{(1-z^{-1})^3}\\
-        n^2 u(n) &\system{Z} -z\brak{\mathcal{Z}\{nu(n)\}}'\\
-        \implies \sum_{n = 0}^{\infty} n^2 z^{-n} &= \frac{z^{-1}(1+z^{-1})}{(1-z^{-1})^3}\, \{\abs{z} > 1\} \label{eq:6}
+        n^2u(n) \system{Z} \frac{z^{-1}(1+z^{-1})}{(1-z^{-1})^3}\, \{\abs{z} > 1\} \label{eq:4}
     \end{align}
 \end{enumerate}
-Taking the Z-Transform of \eqref{eq:1} using \eqref{eq:4} and \eqref{eq:6}
+Taking the Z-Transform of \eqref{eq:1} using \eqref{eq:3} and \eqref{eq:4}
 \begin{align}
-      S(z) = p\brak{\frac{z^{-1}}{(1-z^{-1})^2}} + q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^3}}
+      Y(z) = p\brak{\frac{z^{-1}}{(1-z^{-1})^2}} + q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^3}}
 \end{align}
 Now, 
 \begin{align}
-    s(n) &= x(n) \ast u(n)\\
-    \implies S(z) &= X(z)U(z)\\
-    \implies X(z) &= \frac{S(z)}{U(z)}\label{eq:12}
+    y(n) &= x(n) \ast u(n)\\
+    \implies Y(z) &= X(z)U(z)\\
+    \implies X(z) &= \frac{Y(z)}{U(z)}\label{eq:8}
 \end{align}
-where,
-\begin{align}
-    U(z) &= \frac{1}{1 - z^{-1}}\label{eq:13}
-\end{align}
-Using \eqref{eq:13} in \eqref{eq:12},
+Using \eqref{eq:2} in \eqref{eq:8},
 \begin{align}
     X(z) &= p\brak{\frac{z^{-1}}{(1-z^{-1})}} + q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^2}}
 \end{align}
 Using contour integration for inverse Z-Transform:
 \begin{align}
     x(n) &= \frac{1}{2\pi j} \oint_C X(z) z^{n-1}dz\\
-    &= \frac{1}{2 \pi j} \oint_C  \brak{p\brak{\frac{z^{-1}}{(1-z^{-1})}} + q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^2}}}z^{n-1}dz
+    &= \frac{1}{2 \pi j} \oint_C  \sbrak{p\brak{\frac{z^{-1}}{(1-z^{-1})}} + q\brak{\frac{z^{-1}(1 + z^{-1})}{(1-z^{-1})^2}}}z^{n-1}dz
 \end{align}
 Calculating the residues $R_1$ and $R_2$ at pole $z=1$:
 \begin{align}
@@ -124,15 +115,15 @@ Calculating the residues $R_1$ and $R_2$ at pole $z=1$:
 \end{align}
 Writing x(n) as a discrete signal we get:
 \begin{align}
-    x(n) &= (p-q)u(n) + 2qnu(n)\label{eq:22}
+    x(n) &= (p-q)u(n) + 2qnu(n)\label{eq:19}
 \end{align}
 To simplify, use $n=0$:
 \begin{align}
-    s(0)&=x(0)\\
+    y(0)&=x(0)\\
     \implies 0 &= (p-q)u(0) +2q(0)u(0)\\
     \implies p &= q
 \end{align}
-$\therefore$ \eqref{eq:22} can be written as:
+$\therefore$ \eqref{eq:19} an be written as:
 \begin{align}
     x(n) &= 2qnu(n)
 \end{align}
@@ -146,5 +137,11 @@ Common difference is given by:
     \includegraphics[width = \columnwidth]{figs/x_plot.png}
     \caption{Plot of x(n) vs n for $p=q=0.5$}
     \label{fig:1}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/y_plot.png}
+    \caption{Plot of y(n) vs n for $p=q=0.5$}
+    \label{fig:2}
 \end{figure}
 \end{document}
