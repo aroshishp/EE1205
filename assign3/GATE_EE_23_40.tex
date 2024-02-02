@@ -82,20 +82,12 @@ Calculating the step-size:
 \begin{align}
     \Delta V_{in} &= \frac{V_{max} - V_{min}}{2^n - 1}\\
     &= \frac{5 - 0}{2^8 - 1}\\
-    &= \frac{5}{255}
-\end{align}
-
-$\therefore$ digital output ($V_{out}$) corresponding to $V_{in} = 1.9922V$
-\begin{align}
-   V_{out} &= \frac{V_{in}}{\Delta V_{in}}\\
+    &= \frac{5}{255}\\
+   \implies V_{out} &= \frac{V_{in}}{\Delta V_{in}}\\
     &= \frac{1.9922 \times 255}{5}\\
     &= 101.59\\
-    &\approx 102
-\end{align}
-
-Converting decimal number into hexadecimal number:
-\begin{align}
-    (102)_{10} = (66)_{H}
+    &\approx 102\\
+    (102)_{10} &= (66)_{H}
 \end{align}
 
 $\therefore$ correct answer is option (c).
