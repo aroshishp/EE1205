@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.29)  4 FEB 2024 20:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.29)  5 FEB 2024 14:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1294,28 +1294,32 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-<figs/assign3.png, id=7, 462.528pt x 346.896pt>
-File: figs/assign3.png Graphic file (type png)
-<use figs/assign3.png>
-Package pdftex.def Info: figs/assign3.png  used on input line 62.
-(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+<figs/fig1.jpeg, id=7, 418.56375pt x 323.2075pt>
+File: figs/fig1.jpeg Graphic file (type jpg)
+<use figs/fig1.jpeg>
+Package pdftex.def Info: figs/fig1.jpeg  used on input line 62.
+(pdftex.def)             Requested size: 252.0pt x 194.58684pt.
 
 (./tables/table1.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+<figs/assign3.png, id=8, 462.528pt x 346.896pt>
+File: figs/assign3.png Graphic file (type png)
+<use figs/assign3.png>
+Package pdftex.def Info: figs/assign3.png  used on input line 95.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./figs/assign3.png>]
-(./GATE_EE_23_40.aux)
+ <./figs/fig1.jpeg> <./figs/assign3.png>] (./GATE_EE_23_40.aux)
 Package rerunfilecheck Info: File `GATE_EE_23_40.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30897 strings out of 478287
- 609704 string characters out of 5849289
- 865400 words of memory out of 5000000
- 48423 multiletter control sequences out of 15000+600000
+ 30908 strings out of 478287
+ 609881 string characters out of 5849289
+ 866404 words of memory out of 5000000
+ 48431 multiletter control sequences out of 15000+600000
  547786 words of font info for 200 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,12n,96p,417b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1326,10 +1330,10 @@ t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
 onts/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on GATE_EE_23_40.pdf (1 page, 63426 bytes).
+Output written on GATE_EE_23_40.pdf (1 page, 73261 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 74 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
