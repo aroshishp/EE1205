@@ -7,11 +7,11 @@ int main() {
         printf("Error opening file!\n");
         return 1;
     }
-//Generate x and y values	
+//Generate V_in and V_out values	
     for (int i = 0; i < 10000; i++) {
-        double x = i / 100.0;
-        double y = floor((x + 9.8) / 19.6);
-        fprintf(file, "%.2f %.0f\n", x, y);
+        double V_in = i / 100.0;
+        double V_out = floor((V_in + 9.8) / 19.6);
+        fprintf(file, "%.2f %.0f\n", V_in, V_out);
     }
 
     fclose(file);
