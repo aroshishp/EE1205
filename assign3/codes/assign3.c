@@ -1,30 +1,42 @@
 #include <stdio.h>
 #include <math.h>
 
-void decimalToHexadecimal(int decimalNumber) {
-    int quotient;
-    int i = 1;
-    char hexadecimalNumber[100];
+void doubleToHex(double num) {
+    // Extract the integer and fractional parts
+    int integerPart = (int)num;
+    double fractionalPart = num - integerPart;
 
-    quotient = decimalNumber;
-
-    while (quotient != 0) {
-        int remainder = quotient % 16;
-
-        // Convert remainder to hexadecimal
-        if (remainder < 10)
-            hexadecimalNumber[i++] = 48 + remainder;
-        else
-            hexadecimalNumber[i++] = 55 + remainder;
-
-        quotient = quotient / 16;
+    // Convert integer part to hexadecimal
+    printf("Hexadecimal: ");
+    char hex[16] = "0123456789ABCDEF";
+    int quotient = integerPart;
+    int remainder;
+    int i = 0;
+    if (quotient == 0) {
+        printf("0");
+    } else {
+        // Extract digits one by one and store in a string
+        char hexInteger[20]; // assuming the integer part won't be larger than 20 characters in hexadecimal
+        while (quotient != 0) {
+            remainder = quotient % 16;
+            hexInteger[i++] = hex[remainder];
+            quotient /= 16;
+        }
+        // Print the string in reverse order to get the correct hexadecimal representation
+        for (int j = i - 1; j >= 0; j--) {
+            printf("%c", hexInteger[j]);
+        }
     }
 
-    // Print hexadecimal number in reverse order
-    printf("Hexadecimal equivalent of %d is: ", decimalNumber);
-    for (int j = i - 1; j > 0; j--)
-        printf("%c", hexadecimalNumber[j]);
-    	puts("");
+    // Convert fractional part to hexadecimal
+    printf(".");
+    for (int j = 0; j < 2; ++j) {
+        fractionalPart *= 16;
+        int hexDigit = (int)fractionalPart;
+        printf("%c", hex[hexDigit]);
+        fractionalPart -= hexDigit;
+    }
+    printf("\n");
 }
 
 int main() {
@@ -49,10 +61,6 @@ int main() {
 
     double req_V_out_10 = given_V_in * (pow(2, bits) - 1) / (V_max - V_min);
 
-    decimalToHexadecimal(round(req_V_out_10));
-
-//Using format specifier
-    //int V_out_approx = round(req_V_out_10);
-    //printf("\nHexadecimal Output: %X\n", V_out_approx);
+    doubleToHex(req_V_out_10);
     return 0;
 }
