@@ -77,22 +77,48 @@
     \begin{figure}[!h]
         \centering
         \resizebox{0.2\textwidth}{!}{\input{figs/optB}}
-        \label{optA_gate.ph.23.37}
+        \label{optB_gate.ph.23.37}
     \end{figure}
 
     \item 
     \begin{figure}[!h]
         \centering
         \resizebox{0.2\textwidth}{!}{\input{figs/optC}}
-        \label{optA_gate.ph.23.37}
+        \label{optC_gate.ph.23.37}
     \end{figure}
 
     \item 
     \begin{figure}[!h]
         \centering
         \resizebox{0.2\textwidth}{!}{\input{figs/optD}}
-        \label{optA_gate.ph.23.37}
+        \label{optD_gate.ph.23.37}
     \end{figure}
 \end{enumerate}
+
+\solution
+\input{tables/table1}
+When rising edge of square waveform is applied, capacitor is at discharged state:
+\begin{align}
+    \therefore V_C = 0
+\end{align}
+at rising edge.
+
+$\therefore$ options (c) and (d) are wrong.
+
+Time constants ($\tau$) of circuits (a) and (b) are given below:
+\input{tables/table2}
+\begin{align}
+    \because 5\tau_{(a)} = 2.5\times 10^{-4}< T = 10^{-3}
+\end{align}
+the capacitor charges (i.e. $V_{out} = 0$) before the next wave cycle.
+
+$\therefore$ option (a) is correct.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/assign4.png}
+    \caption{Response of circuit (a) for $R = 0.5k\Omega$, $C = 0.1\mu F$, $f = 1000Hz$ and $V_{in, max} = 1V$}
+    \label{fig:enter-label}
+\end{figure}
 \end{document}
 
