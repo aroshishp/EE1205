@@ -60,43 +60,33 @@
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width = 0.6\columnwidth]{figs/question.png}
+    \includegraphics[width = \columnwidth]{figs/question.png}
     \caption{}
     \label{fig:ques_gate.ph.23.37}
 \end{figure}
 
 \begin{enumerate}[label = (\alph*)]
-    \item 
-    \begin{figure}[!h]
-        \centering
-        \resizebox{0.2\textwidth}{!}{\input{figs/optA}}
-        \label{optA_gate.ph.23.37}
-    \end{figure}
-
-    \item 
-    \begin{figure}[!h]
-        \centering
-        \resizebox{0.2\textwidth}{!}{\input{figs/optB}}
-        \label{optB_gate.ph.23.37}
-    \end{figure}
-
-    \item 
-    \begin{figure}[!h]
-        \centering
-        \resizebox{0.2\textwidth}{!}{\input{figs/optC}}
-        \label{optC_gate.ph.23.37}
-    \end{figure}
-
-    \item 
-    \begin{figure}[!h]
-        \centering
-        \resizebox{0.2\textwidth}{!}{\input{figs/optD}}
-        \label{optD_gate.ph.23.37}
-    \end{figure}
+    \item
+    \begin{minipage}[t]{\columnwidth}
+        \input{figs/optA}
+    \end{minipage}
+    \item
+    \begin{minipage}[t]{\columnwidth}
+        \input{figs/optB}
+    \end{minipage}
+    \item
+    \begin{minipage}[t]{\columnwidth}
+        \input{figs/optC}
+    \end{minipage}
+    \item
+    \begin{minipage}[t]{\columnwidth}
+        \input{figs/optD}
+    \end{minipage}
 \end{enumerate}
 
 \solution
 \input{tables/table1}
+
 When rising edge of square waveform is applied, capacitor is at discharged state:
 \begin{align}
     \therefore V_C = 0
@@ -121,4 +111,3 @@ $\therefore$ option (a) is correct.
     \label{fig:enter-label}
 \end{figure}
 \end{document}
-
