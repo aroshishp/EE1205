@@ -1,0 +1,14 @@
+\begin{figure}[!h]
+    \centering
+    \begin{circuitikz}
+    \draw(0, 0) to[short,*-] ++ (3,0);
+    \draw (0,2) to[C,l=$\frac{1}{sC}$, *-] ++ (3,0) coordinate(a);
+    %\draw (a) to[short,-*] ++ (1,0);
+    \draw (a) to[R, l_=$R$,*-] ++(0,-2);
+    
+    % Voltage labels
+    \draw (0,2) to[open,l_=V$_{in}$] ++(0,-2);
+    \end{circuitikz}
+    \caption{Series RC Circuit in s-domain}
+    \label{fig:s-domain_gate.ph.23.37}
+\end{figure}

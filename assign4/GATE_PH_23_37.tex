@@ -87,27 +87,93 @@
 \solution
 \input{tables/table1}
 
-When rising edge of square waveform is applied, capacitor is at discharged state:
+Input waveform is a square wave (\figref{fig:square_gate.ph.23.37}), so we take its Fourier Transform as shown in \figref{fig:square_fft_gate.ph.23.37}
 \begin{align}
-    \therefore V_C = 0
+    V_{in}(t) &= 2\brak{2\sbrak{\frac{\brak{t-\frac{T}{4}}}{T}} - \sbrak{\frac{2\brak{t - \frac{T}{4}}}{T}}} + 1\\
+    V_{in}(t) &\system{F} \mathcal{V}_{in}(f)
 \end{align}
-at rising edge.
-
-$\therefore$ options (c) and (d) are wrong.
-
-Time constants ($\tau$) of circuits (a) and (b) are given below:
-\input{tables/table2}
+\input{figs/s-domain}
 \begin{align}
-    \because 5\tau_{(a)} = 2.5\times 10^{-4}< T = 10^{-3}
+    s &= j2\pi f\\
+    \implies Z &= R + \frac{1}{sC}\\
+    &= R + \frac{1}{j2\pi f C}\\
+    H(f) &= \frac{V_{out}}{V_{in}}
 \end{align}
-the capacitor charges (i.e. $V_{out} = 0$) before the next wave cycle.
-
-$\therefore$ option (a) is correct.
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width = \columnwidth]{figs/assign4.png}
-    \caption{Response of circuit (a) for $R = 0.5k\Omega$, $C = 0.1\mu F$, $f = 1000Hz$ and $V_{in, max} = 1V$}
-    \label{fig:enter-label}
+    \includegraphics[width = \columnwidth]{figs/square.png}
+    \caption{Input Square Waveform ($V_{in}(t)$)}
+    \label{fig:square_gate.ph.23.37}
 \end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/square_fourier.png}
+    \caption{$\mathcal{V}_{in}(f)$ (Fourier Transform of $V_{in}(t)$)}
+    \label{fig:square_fft_gate.ph.23.37}
+\end{figure}
+Across R,
+\begin{align}
+    H_{R}(f) &= \frac{R}{R + \frac{1}{j2\pi f C}}\\
+    \implies \mathcal{V}_{out}(f) &= H_{R}(f)\mathcal{V}_{in}(f)
+\end{align}
+
+Across C,
+\begin{align}
+    H_{C}(f) &= \frac{\frac{1}{j2\pi f C}}{R + \frac{1}{j2\pi f C}}\\
+    \implies \mathcal{V}_{out}(f) &= H_{C}(f)\mathcal{V}_{in}(f)\\
+    \mathcal{V}_{out}(f) &\system{F} V_{out}(t)
+\end{align}
+
+$\mathcal{V}_{in}(f)$ was input into all four circuits and Inverse Fourier Transform was taken of the response. All responss are plotted below:
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/opt_a_ft.png}
+    \caption{Opt A: Fourier Transform of $V_{out}(t)$}
+    \label{fig:a_ft_gate.ph.23.37}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/opt_a_res.png}
+    \caption{Opt A: Response}
+    \label{fig:a_res_gate.ph.23.37}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/opt_b_ft.png}
+    \caption{Opt B: Fourier Transform of $V_{out}(t)$}
+    \label{fig:b_ft_gate.ph.23.37}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/opt_b_res.png}
+    \caption{Opt B: Response}
+    \label{fig:b_res_gate.ph.23.37}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/opt_c_ft.png}
+    \caption{Opt C: Fourier Transform of $V_{out}(t)$}
+    \label{fig:c_ft_gate.ph.23.37}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/opt_c_res.png}
+    \caption{Opt C: Response}
+    \label{fig:c_res_gate.ph.23.37}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/opt_d_ft.png}
+    \caption{Opt D: Fourier Transform of $V_{out}(t)$}
+    \label{fig:d_ft_gate.ph.23.37}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/opt_d_res.png}
+    \caption{Opt D: Response}
+    \label{fig:d_res_gate.ph.23.37}
+\end{figure}
+
+As \figref{fig:a_res_gate.ph.23.37} resembles question \figref{fig:ques_gate.ph.23.37}, option (a) is the correct answer.
 \end{document}

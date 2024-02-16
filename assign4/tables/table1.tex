@@ -4,9 +4,13 @@
     \hline
        \textbf{Symbol}  & \textbf{Value} &  \textbf{Description}\\
     \hline
-       $V_{in}$  &  &  Input Voltage\\
+       $V_{in}(t)$  &  &  Input Voltage\\
     \hline
-        $V_{out}$ & & Output Voltage\\
+        $\mathcal{V}_{in}(f)$ & & Fourier Transform of $V_{in}(t)$\\
+    \hline
+        $V_{out}(t)$ & & Output Voltage\\
+    \hline
+        $\mathcal{V}_{out}(f)$ & & Fourier Transform of $V_{out}(t)$\\
     \hline
         $f$ & $1000Hz$ & Input Wave Frequency\\
     \hline
@@ -23,6 +27,14 @@
         \cline{2-2}
     \hline
         $\tau$ & $RC$ & Time Constant\\
+    \hline
+        $Z$ & $R + \frac{1}{sC}$ & Impedance\\
+    \hline
+        $H(f)$ & $\frac{V_{out}}{V_{in}}$ & General Transfer Function\\
+    \hline
+        $H_{R}(f)$ & $\frac{V_{R, out}}{V_{in}}$ & Transfer Function for Resistor\\
+    \hline
+        $H_{C}(f)$ & $\frac{V_{C, out}}{V_{in}}$ & Transfer Function for Capacitor\\
     \hline
     \end{tabular}
     \caption{Given Parameters}
