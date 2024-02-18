@@ -43,6 +43,7 @@ V_out_t_A = np.where(t > T/4, np.fft.ifft(V_out_f_R_A), 0)
 V_out_t_A_normalized = V_out_t_A.real / np.max(np.abs(V_out_t_A.real))
 
 plt.plot(t, V_out_t_A_normalized)
+plt.xlim(0.5 * T, 2 * T)
 plt.xticks(np.arange(0, 2.01*T, 0.0005), np.arange(0, 2.01*T, 0.0005) * 1e4)
 plt.xlabel('t ($10^{-4}$ sec)')
 plt.ylabel('$V_{out}$ (V)')
