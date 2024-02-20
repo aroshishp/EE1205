@@ -1,4 +1,4 @@
-% \iffalse
+%\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -89,9 +89,35 @@
 
 Input waveform is a square wave (\figref{fig:square_gate.ph.23.37}), so we take its Fourier Transform as shown in \figref{fig:square_fft_gate.ph.23.37}
 \begin{align}
-    V_{in}(t) &= 2\brak{2\sbrak{\frac{\brak{t-\frac{T}{4}}}{T}} - \sbrak{\frac{2\brak{t - \frac{T}{4}}}{T}}} + 1\\
+    V_{in}(t) &= 2\brak{2\sbrak{\frac{\brak{t-\frac{T}{4}}}{T}} - \sbrak{\frac{2\brak{t - \frac{T}{4}}}{T}}} + 1
+\end{align}
+Fourier Series Coefficient:
+\begin{align}
+    c_k = \frac{1}{T} \int_{T} V_{in}(t)e^{-jk2\pi ft}dt
+\end{align}
+As square wave is even, $\sin(k2\pi ft)$ terms become zero. Cosine coefficients are:
+\begin{align}
+    a_n &= \frac{2}{T} \int_{T} V_{in}(t) \cos\brak{\frac{2\pi nt}{T}}\\
+    &= \frac{4}{n\pi}\sin{\brak{\frac{n\pi}{2}}}\cos\brak{{n\pi}}
+\end{align}
+
+Fourier Series of $V_{in}(t)$, visualized in \figref{fig:square_gate.ph.23.37}:
+\begin{align}
+    V_{in}(t) = \sum_{n = 1}^{\infty}a_n \cos\brak{\frac{2\pi nt}{T}}
+\end{align}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/f_s.png}
+    \caption{Input Square Waveform ($V_{in}(t)$)}
+    \label{fig:square_gate.ph.23.37}
+\end{figure}
+
+Taking Fourier Transform of $V_{in}(t)$, plotted in \figref{fig:square_fft_gate.ph.23.37}:
+\begin{align}
     V_{in}(t) &\system{F} \mathcal{V}_{in}(f)
 \end{align}
+
 \input{figs/s-domain}
 \begin{align}
     s &= j2\pi f\\
@@ -100,12 +126,7 @@ Input waveform is a square wave (\figref{fig:square_gate.ph.23.37}), so we take 
     H(f) &= \frac{V_{out}}{V_{in}}
 \end{align}
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width = \columnwidth]{figs/square.png}
-    \caption{Input Square Waveform ($V_{in}(t)$)}
-    \label{fig:square_gate.ph.23.37}
-\end{figure}
+
 \begin{figure}[!h]
     \centering
     \includegraphics[width = \columnwidth]{figs/square_fourier.png}
@@ -125,7 +146,7 @@ Across C,
     \mathcal{V}_{out}(f) &\system{F} V_{out}(t)
 \end{align}
 
-$\mathcal{V}_{in}(f)$ was input into all four circuits and Inverse Fourier Transform was taken of the response. All responss are plotted below:
+$\mathcal{V}_{in}(f)$ was input into all four circuits and Inverse Fourier Transform was taken of the response. All responses are plotted below:
 \begin{figure}[!h]
     \centering
     \includegraphics[width = \columnwidth]{figs/opt_a_ft.png}
