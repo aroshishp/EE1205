@@ -6,15 +6,19 @@
     \hline
        $V_{in}(t)$  &  &  Input Voltage\\
     \hline
-        $\mathcal{V}_{in}(f)$ & & Fourier Transform of $V_{in}(t)$\\
+        $\mathcal{V}_{in}(j\omega)$ & & Fourier Transform of $V_{in}(t)$\\
     \hline
         $V_{out}(t)$ & & Output Voltage\\
     \hline
-        $\mathcal{V}_{out}(f)$ & & Fourier Transform of $V_{out}(t)$\\
+        $\mathcal{V}_{out}(j\omega)$ & & Fourier Transform of $V_{out}(t)$\\
     \hline
-        $f$ & $1000Hz$ & Input Wave Frequency\\
+        $I(t)$ & & Current\\
     \hline
-        $T$ & $\dfrac{1}{f} = 10^{-3} s$ & Input Wave Time Period\\
+        $\mathcal{I}(j\omega)$ & & Fourier Transform of $I(t)$\\
+    \hline
+        $f$ & $\frac{\omega}{2\pi} = 1000Hz$ & Input Wave Frequency\\
+    \hline
+        $T$ & $\frac{2\pi}{\omega} = 10^{-3} s$ & Input Wave Time Period\\
     \hline
         \multirow{2}{*}{$R$} & (a) $0.5k\Omega$ & \multirow{2}{*}{Resistance}\\
         \cline{2-2}
@@ -28,13 +32,13 @@
     \hline
         $\tau$ & $RC$ & Time Constant\\
     \hline
-        $Z$ & $R + \frac{1}{sC}$ & Impedance\\
+        $Z$ & $R + \frac{1}{j\omega C}$ & Impedance\\
     \hline
-        $H(f)$ & $\frac{V_{out}}{V_{in}}$ & General Transfer Function\\
+        $H(j\omega)$ & $\frac{V_{out}}{V_{in}}$ & General Transfer Function\\
     \hline
-        $H_{R}(f)$ & $\frac{V_{R, out}}{V_{in}}$ & Transfer Function for Resistor\\
+        $H_{R}(j\omega)$ & $\frac{V_{R, out}}{V_{in}}$ & Transfer Function for Resistor\\
     \hline
-        $H_{C}(f)$ & $\frac{V_{C, out}}{V_{in}}$ & Transfer Function for Capacitor\\
+        $H_{C}(j\omega)$ & $\frac{V_{C, out}}{V_{in}}$ & Transfer Function for Capacitor\\
     \hline
     \end{tabular}
     \caption{Given Parameters}

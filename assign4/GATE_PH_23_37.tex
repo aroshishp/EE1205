@@ -115,38 +115,42 @@ Fourier Series of $V_{in}(t)$, visualized in \figref{fig:square_gate.ph.23.37}:
 
 Taking Fourier Transform of $V_{in}(t)$, plotted in \figref{fig:square_fft_gate.ph.23.37}:
 \begin{align}
-    V_{in}(t) &\system{F} \mathcal{V}_{in}(f)
+    V_{in}(t) &\system{F} \mathcal{V}_{in}(j\omega)
 \end{align}
 
 \input{figs/s-domain}
 \begin{align}
-    s &= j2\pi f\\
+    s &= j\omega\\
     \implies Z &= R + \frac{1}{sC}\\
-    &= R + \frac{1}{j2\pi f C}\\
-    H(f) &= \frac{V_{out}}{V_{in}}
+    &= R + \frac{1}{j\omega C}
+\end{align}
+Applying KVL:
+\begin{align}
+    \mathcal{V}_{in}(j\omega) &= \mathcal{I}(j\omega)\brak{R + \frac{1}{j\omega C}}\\
+    \implies \mathcal{I}(j\omega) &= \frac{\mathcal{V}_{in}(j\omega)}{\brak{R + \frac{1}{j\omega C}}}
 \end{align}
 
+$\therefore$ output across R:
+\begin{align}
+    &= R\mathcal{I}(j\omega)\\
+    &= \frac{R}{\brak{R + \frac{1}{j\omega C}}}\mathcal{V}_{in}(j\omega)
+\end{align}
+and output across C:
+\begin{align}
+    &= \frac{1}{j\omega C}\mathcal{I}(j\omega)\\
+    &= \frac{\frac{1}{j\omega C}}{\brak{R + \frac{1}{j\omega C}}}\mathcal{V}_{in}(j\omega)
+\end{align}
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width = \columnwidth]{figs/square_fourier.png}
-    \caption{$\mathcal{V}_{in}(f)$ (Fourier Transform of $V_{in}(t)$)}
+    \caption{$\mathcal{V}_{in}(j\omega)$ (Fourier Transform of $V_{in}(t)$)}
     \label{fig:square_fft_gate.ph.23.37}
 \end{figure}
-Across R,
-\begin{align}
-    H_{R}(f) &= \frac{R}{R + \frac{1}{j2\pi f C}}\\
-    \implies \mathcal{V}_{out}(f) &= H_{R}(f)\mathcal{V}_{in}(f)
-\end{align}
 
-Across C,
-\begin{align}
-    H_{C}(f) &= \frac{\frac{1}{j2\pi f C}}{R + \frac{1}{j2\pi f C}}\\
-    \implies \mathcal{V}_{out}(f) &= H_{C}(f)\mathcal{V}_{in}(f)\\
-    \mathcal{V}_{out}(f) &\system{F} V_{out}(t)
-\end{align}
 
-$\mathcal{V}_{in}(f)$ was input into all four circuits and Inverse Fourier Transform was taken of the response. All responses are plotted below:
+
+$\mathcal{V}_{in}(j\omega)$ was input into all four circuits and Inverse Fourier Transform was taken of the response. All responses are plotted below:
 \begin{figure}[!h]
     \centering
     \includegraphics[width = \columnwidth]{figs/opt_a_ft.png}
