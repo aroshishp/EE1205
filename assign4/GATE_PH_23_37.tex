@@ -103,7 +103,7 @@ As square wave is even, $\sin(k\omega t)$ terms become zero. Cosine coefficients
 
 Fourier Series of $V_{in}(t)$, visualized in \figref{fig:square_gate.ph.23.37}:
 \begin{align}
-    V_{in}(t) = \sum_{n = 1}^{\infty}a_n \cos\brak{\frac{2\pi nt}{T}}
+    V_{in}(t) = \sum_{n = 1}^{\infty}a_n \cos\brak{\frac{2\pi nt}{T}}\label{eq:5_gate.23.ph.37}
 \end{align}
 
 \begin{figure}[!h]
@@ -136,7 +136,7 @@ Transfer Function:
     \begin{align}
         H_R(j\omega) &=  \frac{R}{R + \frac{1}{j\omega C}}\\
         &= \frac{j\omega RC}{1+j\omega RC}\\
-        &= \brak{\frac{\omega R C}{\sqrt{1 + (\omega R C)^2}}}e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}
+        &= \brak{\frac{\omega R C}{\sqrt{1 + (\omega R C)^2}}}e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}\label{eq:13_gate.23.ph.37}
     \end{align}
     \begin{figure}[!h]
         \centering
@@ -146,8 +146,12 @@ Transfer Function:
     \end{figure}
     \begin{align}
         \implies \mathcal{V}_{out}(j\omega) &= H_R(j\omega)\mathcal{V}_{in}(j\omega)\\
-        \implies V_{out}(t) &= \mathcal{F}^{-1}\cbrak{H_R(j\omega)\mathcal{V}_{in}(j\omega)}
+        \implies V_{out}(t) &= \mathcal{F}^{-1}\cbrak{H_R(j\omega)\mathcal{V}_{in}(j\omega)}\\
     \end{align}
+    Using \eqref{eq:5_gate.23.ph.37} and \eqref{eq:13_gate.23.ph.37}, 
+    \begin{multline}
+    V_{out}(t)=\mathcal{F}^{-1}\brak{\frac{\omega R C e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}}{\sqrt{1 + (\omega R C)^2}}}\\ \sum_{n = 1}^{\infty}\frac{4}{n\pi}\sin{\brak{\frac{n\pi}{2}}}\cos\brak{{n\pi}} \cos{\brak{n\omega t}}
+    \end{multline}
     \begin{figure}[!h]
         \centering
         \includegraphics[width = \columnwidth]{figs/opt_a_res.png}
@@ -159,7 +163,7 @@ Transfer Function:
     \begin{align}
         H_R(j\omega) &=  \frac{R}{R + \frac{1}{j\omega C}}\\
         &= \frac{j\omega RC}{1+j\omega RC}\\
-        &= \brak{\frac{\omega R C}{\sqrt{1 + (\omega R C)^2}}}e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}
+        &= \brak{\frac{\omega R C}{\sqrt{1 + (\omega R C)^2}}}e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}\label{eq:20_gate.23.ph.37}
     \end{align}
     \begin{figure}[!h]
         \centering
@@ -171,18 +175,22 @@ Transfer Function:
         \implies \mathcal{V}_{out}(j\omega) &= H_R(j\omega)\mathcal{V}_{in}(j\omega)\\
         \implies V_{out}(t) &= \mathcal{F}^{-1}\cbrak{H_R(j\omega)\mathcal{V}_{in}(j\omega)}
     \end{align}
+     Using \eqref{eq:5_gate.23.ph.37} and \eqref{eq:20_gate.23.ph.37}, 
+    \begin{multline}
+    V_{out}(t)=\mathcal{F}^{-1}\brak{\frac{\omega R C e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}}{\sqrt{1 + (\omega R C)^2}}}\\ \sum_{n = 1}^{\infty}\frac{4}{n\pi}\sin{\brak{\frac{n\pi}{2}}}\cos\brak{{n\pi}} \cos{\brak{n\omega t}}
+    \end{multline}
     \begin{figure}[!h]
         \centering
         \includegraphics[width = \columnwidth]{figs/opt_b_res.png}
         \caption{Opt B: $V_{out}(t)$ vs $t$}
         \label{fig:opt_b_res_gate.23.ph.37}
     \end{figure}
-
+    \newpage
     \item Option C
     \begin{align}
         H_C(j\omega) &=  \frac{\frac{1}{j\omega C}}{R + \frac{1}{j\omega C}}\\
         &= \frac{1}{1+j\omega RC}\\
-        &= \brak{\frac{1}{\sqrt{1 + (\omega R C)^2}}}e^{-j\tan^{-1}\brak{\omega RC}}
+        &= \brak{\frac{1}{\sqrt{1 + (\omega R C)^2}}}e^{-j\tan^{-1}\brak{\omega RC}}\label{eq:26_gate.23.ph.37}
     \end{align}
     \begin{figure}[!h]
         \centering
@@ -194,6 +202,10 @@ Transfer Function:
         \implies \mathcal{V}_{out}(j\omega) &= H_C(j\omega)\mathcal{V}_{in}(j\omega)\\
         \implies V_{out}(t) &= \mathcal{F}^{-1}\cbrak{H_C(j\omega)\mathcal{V}_{in}(j\omega)}
     \end{align}
+     Using \eqref{eq:5_gate.23.ph.37} and \eqref{eq:26_gate.23.ph.37}, 
+    \begin{multline}
+    V_{out}(t)=\mathcal{F}^{-1}\brak{\frac{e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}}{\sqrt{1 + (\omega R C)^2}}}\\ \sum_{n = 1}^{\infty}\frac{4}{n\pi}\sin{\brak{\frac{n\pi}{2}}}\cos\brak{{n\pi}} \cos{\brak{n\omega t}}
+    \end{multline}
     \begin{figure}[!h]
         \centering
         \includegraphics[width = \columnwidth]{figs/opt_c_res.png}
@@ -205,7 +217,7 @@ Transfer Function:
     \begin{align}
         H_C(j\omega) &=  \frac{\frac{1}{j\omega C}}{R + \frac{1}{j\omega C}}\\
         &= \frac{1}{1+j\omega RC}\\
-        &= \brak{\frac{1}{\sqrt{1 + (\omega R C)^2}}}e^{-j\tan^{-1}\brak{\omega RC}}
+        &= \brak{\frac{1}{\sqrt{1 + (\omega R C)^2}}}e^{-j\tan^{-1}\brak{\omega RC}}\label{eq:32_gate.23.ph.37}
     \end{align}
     \begin{figure}[!h]
         \centering
@@ -213,10 +225,15 @@ Transfer Function:
         \caption{$\abs{H_C(j\omega)}$ vs $\omega$ for $R=5k\Omega$, $C=1\mu F$}
         \label{fig:opt_d_hf_gate.ph.23.37}
     \end{figure}
+    \newpage
     \begin{align}
         \implies \mathcal{V}_{out}(j\omega) &= H_C(j\omega)\mathcal{V}_{in}(j\omega)\\
         \implies V_{out}(t) &= \mathcal{F}^{-1}\cbrak{H_C(j\omega)\mathcal{V}_{in}(j\omega)}
     \end{align}
+    Using \eqref{eq:5_gate.23.ph.37} and \eqref{eq:32_gate.23.ph.37}, 
+    \begin{multline}
+    V_{out}(t)=\mathcal{F}^{-1}\brak{\frac{e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}}{\sqrt{1 + (\omega R C)^2}}}\\ \sum_{n = 1}^{\infty}\frac{4}{n\pi}\sin{\brak{\frac{n\pi}{2}}}\cos\brak{{n\pi}} \cos{\brak{n\omega t}}
+    \end{multline}
     \begin{figure}[!h]
         \centering
         \includegraphics[width = \columnwidth]{figs/opt_d_res.png}
