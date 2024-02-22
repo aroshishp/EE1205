@@ -50,7 +50,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{NCERT Math 11.9.2 Q8}
+\title{GATE 2023 PH Q37}
 \author{EE23BTECH11009 - AROSHISH PRADHAN$^{*}$% <-this % stops a space
 }
 \maketitle
@@ -87,15 +87,15 @@
 \solution
 \input{tables/table1}
 
-Input waveform is a square wave (\figref{fig:square_gate.ph.23.37}), so we take its Fourier Transform as shown in \figref{fig:square_fft_gate.ph.23.37}
+Input waveform is a square wave (\figref{fig:square_gate.ph.23.37}), so we take its Fourier Transform 
 \begin{align}
     V_{in}(t) &= 2\brak{2\sbrak{\frac{\brak{t-\frac{T}{4}}}{T}} - \sbrak{\frac{2\brak{t - \frac{T}{4}}}{T}}} + 1
 \end{align}
 Fourier Series Coefficient:
 \begin{align}
-    c_k = \frac{1}{T} \int_{T} V_{in}(t)e^{-jk2\pi ft}dt
+    c_k = \frac{1}{T} \int_{T} V_{in}(t)e^{-jk\omega t}dt
 \end{align}
-As square wave is even, $\sin(k2\pi ft)$ terms become zero. Cosine coefficients are:
+As square wave is even, $\sin(k\omega t)$ terms become zero. Cosine coefficients are:
 \begin{align}
     a_n &= \frac{2}{T} \int_{T} V_{in}(t) \cos\brak{\frac{2\pi nt}{T}}\\
     &= \frac{4}{n\pi}\sin{\brak{\frac{n\pi}{2}}}\cos\brak{{n\pi}}
@@ -113,7 +113,7 @@ Fourier Series of $V_{in}(t)$, visualized in \figref{fig:square_gate.ph.23.37}:
     \label{fig:square_gate.ph.23.37}
 \end{figure}
 
-Taking Fourier Transform of $V_{in}(t)$, plotted in \figref{fig:square_fft_gate.ph.23.37}:
+Taking Fourier Transform of $V_{in}(t)$:
 \begin{align}
     V_{in}(t) &\system{F} \mathcal{V}_{in}(j\omega)
 \end{align}
@@ -124,81 +124,104 @@ Taking Fourier Transform of $V_{in}(t)$, plotted in \figref{fig:square_fft_gate.
     \implies Z &= R + \frac{1}{sC}\\
     &= R + \frac{1}{j\omega C}
 \end{align}
-Applying KVL:
+
+$\mathcal{V}_{in}(j\omega)$ was input into all four circuits and Inverse Fourier Transform was taken of the response.
+
+Transfer Function:
 \begin{align}
-    \mathcal{V}_{in}(j\omega) &= \mathcal{I}(j\omega)\brak{R + \frac{1}{j\omega C}}\\
-    \implies \mathcal{I}(j\omega) &= \frac{\mathcal{V}_{in}(j\omega)}{\brak{R + \frac{1}{j\omega C}}}
+    H(j\omega) = \frac{V_{out}}{V_{in}}
 \end{align}
+\begin{enumerate}
+    \item Option A
+    \begin{align}
+        H_R(j\omega) &=  \frac{R}{R + \frac{1}{j\omega C}}\\
+        &= \frac{j\omega RC}{1+j\omega RC}\\
+        &= \brak{\frac{\omega R C}{\sqrt{1 + (\omega R C)^2}}}e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}
+    \end{align}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=\columnwidth]{figs/opt_a_hf.png}
+        \caption{$\abs{H_R(j\omega)}$ vs $\omega$ for $R=0.5k\Omega$, $C=0.1\mu F$}
+        \label{fig:opt_a_hf_gate.ph.23.37}
+    \end{figure}
+    \begin{align}
+        \implies \mathcal{V}_{out}(j\omega) &= H_R(j\omega)\mathcal{V}_{in}(j\omega)\\
+        \implies V_{out}(t) &= \mathcal{F}^{-1}\cbrak{H_R(j\omega)\mathcal{V}_{in}(j\omega)}
+    \end{align}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width = \columnwidth]{figs/opt_a_res.png}
+        \caption{Opt A: $V_{out}(t)$ vs $t$}
+        \label{fig:opt_a_res_gate.23.ph.37}
+    \end{figure}
 
-$\therefore$ output across R:
-\begin{align}
-    &= R\mathcal{I}(j\omega)\\
-    &= \frac{R}{\brak{R + \frac{1}{j\omega C}}}\mathcal{V}_{in}(j\omega)
-\end{align}
-and output across C:
-\begin{align}
-    &= \frac{1}{j\omega C}\mathcal{I}(j\omega)\\
-    &= \frac{\frac{1}{j\omega C}}{\brak{R + \frac{1}{j\omega C}}}\mathcal{V}_{in}(j\omega)
-\end{align}
+    \item Option B
+    \begin{align}
+        H_R(j\omega) &=  \frac{R}{R + \frac{1}{j\omega C}}\\
+        &= \frac{j\omega RC}{1+j\omega RC}\\
+        &= \brak{\frac{\omega R C}{\sqrt{1 + (\omega R C)^2}}}e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}
+    \end{align}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=\columnwidth]{figs/opt_b_hf.png}
+        \caption{$\abs{H_R(j\omega)}$ vs $\omega$ for $R=5k\Omega$, $C=1\mu F$}
+        \label{fig:opt_b_hf_gate.ph.23.37}
+    \end{figure}
+    \begin{align}
+        \implies \mathcal{V}_{out}(j\omega) &= H_R(j\omega)\mathcal{V}_{in}(j\omega)\\
+        \implies V_{out}(t) &= \mathcal{F}^{-1}\cbrak{H_R(j\omega)\mathcal{V}_{in}(j\omega)}
+    \end{align}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width = \columnwidth]{figs/opt_b_res.png}
+        \caption{Opt B: $V_{out}(t)$ vs $t$}
+        \label{fig:opt_b_res_gate.23.ph.37}
+    \end{figure}
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width = \columnwidth]{figs/square_fourier.png}
-    \caption{$\mathcal{V}_{in}(j\omega)$ (Fourier Transform of $V_{in}(t)$)}
-    \label{fig:square_fft_gate.ph.23.37}
-\end{figure}
-
-
-
-$\mathcal{V}_{in}(j\omega)$ was input into all four circuits and Inverse Fourier Transform was taken of the response. All responses are plotted below:
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width = \columnwidth]{figs/opt_a_ft.png}
-    \caption{Opt A: Fourier Transform of $V_{out}(t)$}
-    \label{fig:a_ft_gate.ph.23.37}
-\end{figure}
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width = \columnwidth]{figs/opt_a_res.png}
-    \caption{Opt A: Response}
-    \label{fig:a_res_gate.ph.23.37}
-\end{figure}
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width = \columnwidth]{figs/opt_b_ft.png}
-    \caption{Opt B: Fourier Transform of $V_{out}(t)$}
-    \label{fig:b_ft_gate.ph.23.37}
-\end{figure}
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width = \columnwidth]{figs/opt_b_res.png}
-    \caption{Opt B: Response}
-    \label{fig:b_res_gate.ph.23.37}
-\end{figure}
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width = \columnwidth]{figs/opt_c_ft.png}
-    \caption{Opt C: Fourier Transform of $V_{out}(t)$}
-    \label{fig:c_ft_gate.ph.23.37}
-\end{figure}
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width = \columnwidth]{figs/opt_c_res.png}
-    \caption{Opt C: Response}
-    \label{fig:c_res_gate.ph.23.37}
-\end{figure}
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width = \columnwidth]{figs/opt_d_ft.png}
-    \caption{Opt D: Fourier Transform of $V_{out}(t)$}
-    \label{fig:d_ft_gate.ph.23.37}
-\end{figure}
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width = \columnwidth]{figs/opt_d_res.png}
-    \caption{Opt D: Response}
-    \label{fig:d_res_gate.ph.23.37}
-\end{figure}
-
-As \figref{fig:a_res_gate.ph.23.37} resembles question \figref{fig:ques_gate.ph.23.37}, option (a) is the correct answer.
+    \item Option C
+    \begin{align}
+        H_C(j\omega) &=  \frac{\frac{1}{j\omega C}}{R + \frac{1}{j\omega C}}\\
+        &= \frac{1}{1+j\omega RC}\\
+        &= \brak{\frac{1}{\sqrt{1 + (\omega R C)^2}}}e^{-j\tan^{-1}\brak{\omega RC}}
+    \end{align}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=\columnwidth]{figs/opt_c_hf.png}
+        \caption{$\abs{H_C(j\omega)}$ vs $\omega$ for $R=0.5k\Omega$, $C=0.1\mu F$}
+        \label{fig:opt_c_hf_gate.ph.23.37}
+    \end{figure}
+    \begin{align}
+        \implies \mathcal{V}_{out}(j\omega) &= H_C(j\omega)\mathcal{V}_{in}(j\omega)\\
+        \implies V_{out}(t) &= \mathcal{F}^{-1}\cbrak{H_C(j\omega)\mathcal{V}_{in}(j\omega)}
+    \end{align}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width = \columnwidth]{figs/opt_c_res.png}
+        \caption{Opt C: $V_{out}(t)$ vs $t$}
+        \label{fig:opt_c_res_gate.23.ph.37}
+    \end{figure}
+    
+    \item Option D
+    \begin{align}
+        H_C(j\omega) &=  \frac{\frac{1}{j\omega C}}{R + \frac{1}{j\omega C}}\\
+        &= \frac{1}{1+j\omega RC}\\
+        &= \brak{\frac{1}{\sqrt{1 + (\omega R C)^2}}}e^{-j\tan^{-1}\brak{\omega RC}}
+    \end{align}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=\columnwidth]{figs/opt_d_hf.png}
+        \caption{$\abs{H_C(j\omega)}$ vs $\omega$ for $R=5k\Omega$, $C=1\mu F$}
+        \label{fig:opt_d_hf_gate.ph.23.37}
+    \end{figure}
+    \begin{align}
+        \implies \mathcal{V}_{out}(j\omega) &= H_C(j\omega)\mathcal{V}_{in}(j\omega)\\
+        \implies V_{out}(t) &= \mathcal{F}^{-1}\cbrak{H_C(j\omega)\mathcal{V}_{in}(j\omega)}
+    \end{align}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width = \columnwidth]{figs/opt_d_res.png}
+        \caption{Opt D: $V_{out}(t)$ vs $t$}
+        \label{fig:opt_d_res_gate.23.ph.37}
+    \end{figure}
+\end{enumerate}
 \end{document}
