@@ -125,11 +125,11 @@ Taking Fourier Transform of $V_{in}(t)$:
     &= R + \frac{1}{j\omega C}
 \end{align}
 
-$\mathcal{V}_{in}(j\omega)$ was input into all four circuits and Inverse Fourier Transform was taken of the response.
+$\mathcal{V}_{in}(j\omega)$ was input into all four circuits and $V_{out}(t)$ was calculated using the Transfer Functions of the $RC$ Filters.
 
 Transfer Function:
 \begin{align}
-    H(j\omega) = \frac{V_{out}}{V_{in}}
+    H(j\omega) &= \frac{V_{out}}{V_{in}}
 \end{align}
 \begin{enumerate}
     \item Option A
@@ -146,24 +146,25 @@ Transfer Function:
     \end{figure}
     \begin{align}
         \implies \mathcal{V}_{out}(j\omega) &= H_R(j\omega)\mathcal{V}_{in}(j\omega)\\
-        \implies V_{out}(t) &= \mathcal{F}^{-1}\cbrak{H_R(j\omega)\mathcal{V}_{in}(j\omega)}\\
     \end{align}
-    Using \eqref{eq:5_gate.23.ph.37} and \eqref{eq:13_gate.23.ph.37}, 
-    \begin{multline}
-    V_{out}(t)=\mathcal{F}^{-1}\brak{\frac{\omega R C e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}}{\sqrt{1 + (\omega R C)^2}}}\ast \\ \brak{\sum_{n = 1}^{\infty}\frac{4}{n\pi}\sin{\brak{\frac{n\pi}{2}}}\cos\brak{{n\pi}} \cos{\brak{n\omega t}}}
-    \end{multline}
+    Using \eqref{eq:5_gate.23.ph.37} and  \eqref{eq:13_gate.23.ph.37},
+    {\small
+    \begin{align}
+        V_{out}(t) &= \sum_{n=1}^{\infty}\brak{\frac{n\omega R C}{\sqrt{1 + (n\omega R C)^2}}}a_n\cos\brak{n\omega t+\tan^{-1}\brak{\frac{1}{n\omega RC}}}
+    \end{align}
+    }
     \begin{figure}[!h]
         \centering
         \includegraphics[width = \columnwidth]{figs/opt_a_res.png}
         \caption{Opt A: $V_{out}(t)$ vs $t$}
-        \label{fig:opt_a_res_gate.23.ph.37}
+        \label{fig:opt_a_res_gate.ph.23.37}
     \end{figure}
-
+    \newpage
     \item Option B
     \begin{align}
         H_R(j\omega) &=  \frac{R}{R + \frac{1}{j\omega C}}\\
         &= \frac{j\omega RC}{1+j\omega RC}\\
-        &= \brak{\frac{\omega R C}{\sqrt{1 + (\omega R C)^2}}}e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}\label{eq:20_gate.23.ph.37}
+        &= \brak{\frac{\omega R C}{\sqrt{1 + (\omega R C)^2}}}e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}\label{eq:19_gate.23.ph.37}
     \end{align}
     \begin{figure}[!h]
         \centering
@@ -172,25 +173,25 @@ Transfer Function:
         \label{fig:opt_b_hf_gate.ph.23.37}
     \end{figure}
     \begin{align}
-        \implies \mathcal{V}_{out}(j\omega) &= H_R(j\omega)\mathcal{V}_{in}(j\omega)\\
-        \implies V_{out}(t) &= \mathcal{F}^{-1}\cbrak{H_R(j\omega)\mathcal{V}_{in}(j\omega)}
+        \implies \mathcal{V}_{out}(j\omega) &= H_R(j\omega)\mathcal{V}_{in}(j\omega)
     \end{align}
-     Using \eqref{eq:5_gate.23.ph.37} and \eqref{eq:20_gate.23.ph.37}, 
-    \begin{multline}
-    V_{out}(t)=\mathcal{F}^{-1}\brak{\frac{\omega R C e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}}{\sqrt{1 + (\omega R C)^2}}}\ast\\ \brak{\sum_{n = 1}^{\infty}\frac{4}{n\pi}\sin{\brak{\frac{n\pi}{2}}}\cos\brak{{n\pi}} \cos{\brak{n\omega t}}}
-    \end{multline}
+     Using \eqref{eq:5_gate.23.ph.37} and  \eqref{eq:19_gate.23.ph.37},
+    {\small
+    \begin{align}
+        V_{out}(t) &= \sum_{n=1}^{\infty}\brak{\frac{n\omega R C}{\sqrt{1 + (n\omega R C)^2}}}a_n\cos\brak{n\omega t+\tan^{-1}\brak{\frac{1}{n\omega RC}}}
+    \end{align}
+    }
     \begin{figure}[!h]
         \centering
         \includegraphics[width = \columnwidth]{figs/opt_b_res.png}
         \caption{Opt B: $V_{out}(t)$ vs $t$}
-        \label{fig:opt_b_res_gate.23.ph.37}
+        \label{fig:opt_b_res_gate.ph.23.37}
     \end{figure}
-    \newpage
     \item Option C
     \begin{align}
         H_C(j\omega) &=  \frac{\frac{1}{j\omega C}}{R + \frac{1}{j\omega C}}\\
         &= \frac{1}{1+j\omega RC}\\
-        &= \brak{\frac{1}{\sqrt{1 + (\omega R C)^2}}}e^{-j\tan^{-1}\brak{\omega RC}}\label{eq:26_gate.23.ph.37}
+        &= \brak{\frac{1}{\sqrt{1 + (\omega R C)^2}}}e^{-j\tan^{-1}\brak{\omega RC}}\label{eq:24_gate.23.ph.37}
     \end{align}
     \begin{figure}[!h]
         \centering
@@ -199,25 +200,25 @@ Transfer Function:
         \label{fig:opt_c_hf_gate.ph.23.37}
     \end{figure}
     \begin{align}
-        \implies \mathcal{V}_{out}(j\omega) &= H_C(j\omega)\mathcal{V}_{in}(j\omega)\\
-        \implies V_{out}(t) &= \mathcal{F}^{-1}\cbrak{H_C(j\omega)\mathcal{V}_{in}(j\omega)}
+        \implies \mathcal{V}_{out}(j\omega) &= H_C(j\omega)\mathcal{V}_{in}(j\omega)
     \end{align}
-     Using \eqref{eq:5_gate.23.ph.37} and \eqref{eq:26_gate.23.ph.37}, 
-    \begin{multline}
-    V_{out}(t)=\mathcal{F}^{-1}\brak{\frac{e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}}{\sqrt{1 + (\omega R C)^2}}}\ast\\ \brak{\sum_{n = 1}^{\infty}\frac{4}{n\pi}\sin{\brak{\frac{n\pi}{2}}}\cos\brak{{n\pi}} \cos{\brak{n\omega t}}}
-    \end{multline}
+     Using \eqref{eq:5_gate.23.ph.37} and  \eqref{eq:24_gate.23.ph.37},
+    {\small
+    \begin{align}
+        V_{out}(t) &= \sum_{n=1}^{\infty}\brak{\frac{1}{\sqrt{1 + (n\omega R C)^2}}}a_n\cos\brak{n\omega t-\tan^{-1}\brak{n\omega RC}}
+    \end{align}
+    }
     \begin{figure}[!h]
         \centering
         \includegraphics[width = \columnwidth]{figs/opt_c_res.png}
         \caption{Opt C: $V_{out}(t)$ vs $t$}
-        \label{fig:opt_c_res_gate.23.ph.37}
+        \label{fig:opt_c_res_gate.ph.23.37}
     \end{figure}
-    
     \item Option D
     \begin{align}
         H_C(j\omega) &=  \frac{\frac{1}{j\omega C}}{R + \frac{1}{j\omega C}}\\
         &= \frac{1}{1+j\omega RC}\\
-        &= \brak{\frac{1}{\sqrt{1 + (\omega R C)^2}}}e^{-j\tan^{-1}\brak{\omega RC}}\label{eq:32_gate.23.ph.37}
+        &= \brak{\frac{1}{\sqrt{1 + (\omega R C)^2}}}e^{-j\tan^{-1}\brak{\omega RC}}\label{eq:29_gate.23.ph.37}
     \end{align}
     \begin{figure}[!h]
         \centering
@@ -225,20 +226,20 @@ Transfer Function:
         \caption{$\abs{H_C(j\omega)}$ vs $\omega$ for $R=5k\Omega$, $C=1\mu F$}
         \label{fig:opt_d_hf_gate.ph.23.37}
     \end{figure}
-    \newpage
     \begin{align}
-        \implies \mathcal{V}_{out}(j\omega) &= H_C(j\omega)\mathcal{V}_{in}(j\omega)\\
-        \implies V_{out}(t) &= \mathcal{F}^{-1}\cbrak{H_C(j\omega)\mathcal{V}_{in}(j\omega)}
+        \implies \mathcal{V}_{out}(j\omega) &= H_C(j\omega)\mathcal{V}_{in}(j\omega)
     \end{align}
-    Using \eqref{eq:5_gate.23.ph.37} and \eqref{eq:32_gate.23.ph.37}, 
-    \begin{multline}
-    V_{out}(t)=\mathcal{F}^{-1}\brak{\frac{e^{j\tan^{-1}\brak{\frac{1}{\omega RC}}}}{\sqrt{1 + (\omega R C)^2}}}\ast\\ \brak{\sum_{n = 1}^{\infty}\frac{4}{n\pi}\sin{\brak{\frac{n\pi}{2}}}\cos\brak{{n\pi}} \cos{\brak{n\omega t}}}
-    \end{multline}
+    Using \eqref{eq:5_gate.23.ph.37} and  \eqref{eq:29_gate.23.ph.37},
+    {\small
+    \begin{align}
+        V_{out}(t) &= \sum_{n=1}^{\infty}\brak{\frac{1}{\sqrt{1 + (n\omega R C)^2}}}a_n\cos\brak{n\omega t-\tan^{-1}\brak{n\omega RC}}
+    \end{align}
+    }
     \begin{figure}[!h]
         \centering
         \includegraphics[width = \columnwidth]{figs/opt_d_res.png}
         \caption{Opt D: $V_{out}(t)$ vs $t$}
-        \label{fig:opt_d_res_gate.23.ph.37}
+        \label{fig:opt_d_res_gate.ph.23.37}
     \end{figure}
 \end{enumerate}
 \end{document}
