@@ -1,0 +1,29 @@
+\begin{figure}[!h]
+    \centering
+    \begin{circuitikz}[scale = 0.8]
+        \draw(0, 0) -- (1, 0);
+        \draw(1, 0.5) -- (1, -0.5);
+        \draw(4, 0.5) -- (4, -0.5);
+        \draw(4, 0) -- (5, 0);
+
+        \draw(1, 0.5) to[R, l = $6\Omega$](4, 0.5);
+        \draw(1, -0.5) to[R, l_ = $3\Omega$](4, -0.5);
+
+        \draw(0, 0) -- (0, -2);
+        \draw(5, 0) -- (5, -2);
+
+        \draw(0, -2) to[C, l = $1\mu F$](2, -2);
+        \draw(2, -2) to [R, l = $10\Omega$](5, -2);
+
+        \draw(0, -2) -- (0, -3.5);
+        \draw(5, -2) -- (5, -3.5);
+
+        \draw(0, -3.5) to[battery2, l_ = $10V$](1.5, -3.5);
+        \draw (1.5, -3.5) to[switch, l = S] (2, -3.5);
+        \draw(2, -3.5) to [R, l = $2\Omega$](5, -3.5);
+
+        \draw[->](0, -3.5) -- (0, -2.5) node[midway, left] {$I$}; 
+    \end{circuitikz}
+    \caption{}
+    \label{fig:1_gate.ee.22.31}
+\end{figure}
