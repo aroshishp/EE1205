@@ -1,0 +1,111 @@
+%\iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                            \usepackage{tikz}
+\usepackage{circuitikz}
+\def\inputGnumericTable{}                                
+\usepackage[latin1]{inputenc}                            
+\usepackage{color}                                       
+\usepackage{array}                                       
+\usepackage{longtable}                                   
+\usepackage{calc}                              
+\usepackage{tikz}
+\usepackage{multirow}                                    
+\usepackage{hhline}                                      
+\usepackage{ifthen}                            
+\usepackage{caption}
+\usepackage{lscape}
+\usepackage{amsmath}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{GATE 2022 NM Q24}
+\author{EE23BTECH11009 - AROSHISH PRADHAN$^{*}$% <-this % stops a space
+}
+\maketitle
+\newpage
+\bigskip
+\textbf{Question:} If 
+\begin{align}
+    \frac{a_0}{2} + \sum_{n=1}^{\infty}a_n\cos(nx)\nonumber
+\end{align}
+is the Fourier cosine series of the function
+\begin{align}
+    f(x) = \sin(x), 0 < x < \pi \nonumber
+\end{align}
+then which of the following are TRUE?
+\begin{enumerate}[label=(\alph*)]
+    \item $a_0 + a_1 = \frac{4}{\pi}$
+    \item $a_0 = \frac{4}{\pi}$
+    \item $a_0 + a_1 = \frac{2}{\pi}$
+    \item $a_1 = \frac{2}{\pi}$
+\end{enumerate}
+\solution
+\input{tables/table1}
+
+Fourier series of a function $f(x)$:
+\begin{align}
+    f(x) = a_0 + \sum_{n=1}^{\infty}a_n\cos(n\omega x) + \sum_{n=1}^{\infty}b_n\sin(n\omega x) 
+\end{align}
+where,
+\begin{align}
+    a_0 &= \frac{1}{T}\int_{T}f(x)dx\\
+    a_n &= \frac{2}{T}\int_{T}f(x)\cos(n\omega x)dx\\
+    b_n &= \frac{2}{T}\int_{T}f(x)\sin(n\omega x)dx
+\end{align}
+
+Calculating for given function:
+\begin{align}
+    \frac{a_0}{2} &= \frac{1}{\pi}\int_{0}^{\pi}\sin(x)dx\\
+    \implies a_0 &= \frac{4}{\pi} \label{eq:6_gate.22.nm.24}\\
+    a_n &= \frac{2}{\pi}\int_{0}^{\pi}\sin(x)\cos(nx)dx\\
+    \implies a_1 &= \frac{2}{\pi}\int_{0}^{\pi}\sin(x)\cos(x)dx\\
+    &= 0 \label{eq:9_gate.22.nm.24}
+\end{align}
+
+Calculating general $a_n$:
+\begin{align}
+    a_n &= \frac{2}{\pi}\int_{0}^{\pi}\sin(x)\cos(nx)dx\\
+    &= \frac{1}{\pi}\int_{0}^{\pi}(\sin(x+nx) + \sin(x - nx))dx\\
+    &= \frac{1}{\pi}\sbrak{\frac{-\cos((n+1)x)}{n+1} + \frac{-\cos((1-n)x)}{1-n}}_{0}^{\pi}\\
+    &= \frac{2(1 + \cos(n\pi))}{\pi(1 - n^2)}
+\end{align}
+From \eqref{eq:6_gate.22.nm.24} and \eqref{eq:9_gate.22.nm.24},
+\begin{align}
+    a_0 + a_1 &= \frac{4}{\pi}\\
+    a_0 &= 0
+\end{align}
+$\therefore$ correct options are (a) and (b).
+\end{document}
+
