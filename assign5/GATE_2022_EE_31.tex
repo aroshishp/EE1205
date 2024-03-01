@@ -1,4 +1,4 @@
-%\iffalse
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -57,12 +57,13 @@
 \newpage
 \bigskip
 \textbf{Question:} In the circuit shown below, the switch S is closed at $t=0$. The magnitude of the steady state voltage, in volts, across the $6\Omega$ resistor is \_\_\_\_\_.(\textit{round off to two decimal places})\\ \hfill(GATE 2022 EE Q31)
-\input{figs/question}\\
+\input{2022/EE/31/figs/question}\\
 
 \solution 
+\fi
 Consider a sinusoidal input source of angular frequency $\omega$.
 
-\input{tables/table1}
+\input{2022/EE/31/tables/table1}
 Using KCL and KVL, we can calculate:
 \begin{align}
     Z_{\text{eff}} &= \frac{2\brak{10 + \frac{1}{j\omega C}}}{12 + \frac{1}{j\omega C}} + 2\\
@@ -71,7 +72,7 @@ Using KCL and KVL, we can calculate:
     &= 2\sbrak{\brak{\frac{10 + \frac{1}{j\omega C}}{12 + \frac{1}{j\omega C}}}\frac{V_{in}(j\omega)}{\brak{\frac{2\brak{10 + \frac{1}{j\omega C}}}{12 + \frac{1}{j \omega C}}+2}}}\\
     \implies H(j\omega) &= \frac{1 + 10j\omega C}{2(1 + 11j\omega C)}
 \end{align}
-\input{figs/fig2}
+\input{2022/EE/31/figs/fig2}
 \begin{align}
     H(j\omega) &= \brak{\frac{\sqrt{1 + 100\omega^2 C^2}}{2\sqrt{1 + 121\omega^2 C^2}}}e^{j(\tan^{-1}(10\omega C) - \tan^{-1}(11\omega C))}\\
     &= \brak{\frac{\sqrt{1 + 100\omega^2 C^2}}{2\sqrt{1 + 121\omega^2 C^2}}}e^{j\tan^{-1}\brak{\frac{-\omega C}{1 + 110\omega^2 C^2}}}\\
@@ -80,7 +81,7 @@ Using KCL and KVL, we can calculate:
 \end{align}
 \begin{figure}[!h]
     \centering
-    \includegraphics[width = \columnwidth]{figs/V_out_plot.png}
+    \includegraphics[width = \columnwidth]{2022/EE/31/figs/V_out_plot.png}
     \caption{Plot of $V_{out}(t)$ at $t=0$ w.r.t $\omega$}
     \label{fig:3_gate.22.ee.31}
 \end{figure}
@@ -92,5 +93,5 @@ $\therefore$ substituting $\omega = 0$, we get:
     V_{out}(t) &= 5V
 \end{align}
 
-\end{document}
+%\end{document}
 

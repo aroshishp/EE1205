@@ -1,4 +1,4 @@
-%\iffalse
+\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -58,10 +58,11 @@
 \bigskip
 \textbf{Question:} In the circuit shown, the load is driven by a sinusoidal A.C. voltage source $V_1 = 100\angle0\degree V$ at $50Hz$. Given $R_1 = 20\Omega$, $C_1 = \brak{\frac{1000}{\pi}}\mu F$, $L_1 = \brak{\frac{20}{\pi}}mH$ and $R_2 = 4\Omega$, the power factor is \_\_\_\_\_ (round off to one decimal place)\\
 \hfill(GATE 2022 IN Q52)
-\input{figs/question}
+\input{2022/IN/52/figs/question}
 
 \solution
-\input{tables/table1}
+\fi
+\input{2022/IN/52/tables/table1}
 
 \begin{align}
     Z_{\text{eff}} &= R_2 + j\omega L_1 + \frac{\frac{R_1}{j\omega C_1}}{R_1 + \frac{1}{j\omega C_1}}\\
@@ -76,9 +77,9 @@ $\therefore$ Power Factor:
 \end{align}
 \begin{figure}[!h]
     \centering
-    \includegraphics[width = \columnwidth]{figs/Zplot.png}
+    \includegraphics[width = \columnwidth]{2022/IN/52/figs/Zplot.png}
     \caption{Plot of $Z_{\text{eff}}$ vs $\omega$}
     \label{fig:2_gate.22.in.52}
 \end{figure}
-\end{document}
+%\end{document}
 

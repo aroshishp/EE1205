@@ -1,4 +1,4 @@
-\iffalse
+%\iffalse
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -50,63 +50,54 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{GATE 2022 NM Q24}
+\title{GATE 2021 NM Q24}
 \author{EE23BTECH11009 - AROSHISH PRADHAN$^{*}$% <-this % stops a space
 }
 \maketitle
 \newpage
 \bigskip
-\textbf{Question:} If 
+\textbf{Question:} The sum of the infinite geometric series
 \begin{align}
-    \frac{a_0}{2} + \sum_{n=1}^{\infty}a_n\cos(nx)\nonumber
+    1 + \frac{1}{3} + \frac{1}{3^2} + \frac{1}{3^3} + ... \nonumber
 \end{align}
-is the Fourier cosine series of the function
-\begin{align}
-    f(x) = \sin(x), 0 < x < \pi \nonumber
-\end{align}
-then which of the following are TRUE?
-\begin{enumerate}[label=(\alph*)]
-    \item $a_0 + a_1 = \frac{4}{\pi}$
-    \item $a_0 = \frac{4}{\pi}$
-    \item $a_0 + a_1 = \frac{2}{\pi}$
-    \item $a_1 = \frac{2}{\pi}$
-\end{enumerate}
+(rounded off to one decimal place) is \_\_\_\_\_.
+\hfill(GATE 2021 BT Q20)\\
 \solution
-\fi
-\input{2022/NM/24/tables/table1}
+\input{tables/table1}
 
-Fourier series of a function $f(x)$:
+General term:
 \begin{align}
-    f(x) = a_0 + \sum_{n=1}^{\infty}a_n\cos(n\omega x) + \sum_{n=1}^{\infty}b_n\sin(n\omega x) 
+    x(n) &= x(0)r^nu(n)\\
+    \implies X(z) &= \frac{1}{1-rz^{-1}}\\
+    y(n) &= x(n) \ast u(n)\\
+    \implies Y(z) &= X(z)U(z)\\
+    &= \frac{1}{(1-rz^{-1})(1-z^{-1})}\\
+    &= \frac{1}{r-1}\brak{\frac{r}{1-rz^{-1}} - \frac{1}{1-z^{-1}}}\\
 \end{align}
-where,
+Taking inverse Z-transform:
 \begin{align}
-    a_0 &= \frac{1}{T}\int_{T}f(x)dx\\
-    a_n &= \frac{2}{T}\int_{T}f(x)\cos(n\omega x)dx\\
-    b_n &= \frac{2}{T}\int_{T}f(x)\sin(n\omega x)dx
+    y(n) &= \frac{1}{r-1}\brak{r(r^nu(n)) - u(n))}\\
+    &= \brak{\frac{r^{n+1} - 1}{r - 1}}u(n)\\
+    &= \brak{\frac{1 - r^{n+1}}{1 -  r}}u(n)
+\end{align}
+For infinite terms:
+\begin{align}
+    y(\infty) &= \lim_{n \rightarrow \infty} \brak{\frac{1 - r^{n+1}}{1 -  r}}u(n)\\
+    &= \frac{1}{1-r}\\
+    &= \frac{3}{2}
 \end{align}
 
-Calculating for given function:
-\begin{align}
-    \frac{a_0}{2} &= \frac{1}{\pi}\int_{0}^{\pi}\sin(x)dx\\
-    \implies a_0 &= \frac{4}{\pi} \label{eq:6_gate.22.nm.24}\\
-    a_n &= \frac{2}{\pi}\int_{0}^{\pi}\sin(x)\cos(nx)dx\\
-    \implies a_1 &= \frac{2}{\pi}\int_{0}^{\pi}\sin(x)\cos(x)dx\\
-    &= 0 \label{eq:9_gate.22.nm.24}
-\end{align}
-
-Calculating general $a_n$:
-\begin{align}
-    a_n &= \frac{2}{\pi}\int_{0}^{\pi}\sin(x)\cos(nx)dx\\
-    &= \frac{1}{\pi}\int_{0}^{\pi}(\sin(x+nx) + \sin(x - nx))dx\\
-    &= \frac{1}{\pi}\sbrak{\frac{-\cos((n+1)x)}{n+1} + \frac{-\cos((1-n)x)}{1-n}}_{0}^{\pi}\\
-    &= \frac{2(1 + \cos(n\pi))}{\pi(1 - n^2)}
-\end{align}
-From \eqref{eq:6_gate.22.nm.24} and \eqref{eq:9_gate.22.nm.24},
-\begin{align}
-    a_0 + a_1 &= \frac{4}{\pi}\\
-    a_0 &= 0
-\end{align}
-$\therefore$ correct options are (a) and (b).
-%\end{document}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/x_plt.png}
+    \caption{Plot of $x(n)$ vs $n$}
+    \label{fig:1_gate.21.bt.20}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/y_plt.png}
+    \caption{Plot of $y(n)$ vs $n$}
+    \label{fig:2_gate.21.bt.20}
+\end{figure}
+\end{document}
 
