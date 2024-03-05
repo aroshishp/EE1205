@@ -1,16 +1,13 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
-# Load data from .dat file
 data = np.loadtxt('assign9.dat')
-Gjw = data[:,0] + 1j * data[:,1]
+s = data[:, 0]
+G_s = data[:, 1]
 
-# Frequency range
-w = np.linspace(-2, 2, len(data))
-
-# Plot
-plt.plot(w, np.abs(Gjw))
-plt.xlabel('$\omega$')
-plt.ylabel('|G(jw)|')
+plt.plot(s, G_s)
+plt.xlabel('s')
+plt.ylabel('G(s)')
 plt.grid(True)
+plt.savefig('assign9.png')
 plt.show()

@@ -1,28 +1,26 @@
-#include <stdio.h>
-#include <math.h>
-#include <complex.h>
+#include<stdio.h>
+#include<math.h>
+#define POINTS 1000
 
-#define SIZE 1000
-
-// Transfer function
-double complex G(double w) {
-    double complex s = w * I;
-    return 3 * cexp(-4 * s) / (12 * s + 1);
+double G_s(double s)
+{
+    return (3 * exp(-4 * s))/(12 * s + 1);
 }
 
-int main() {
+int main()
+{
     FILE *fp;
     fp = fopen("assign9.dat", "w");
-    if (fp == NULL) {
-        printf("Error opening file!\n");
+    if (fp == NULL)
+    {
+        printf("Error Opening File.\n");
         return 1;
     }
 
-    double w;
-    for (int i = 0; i < SIZE; i++) {
-        w = -2 + (4.0 / SIZE) * i;
-        double complex Gjw = G(w);
-        fprintf(fp, "%f %f\n", creal(Gjw), cimag(Gjw));
+    for(double i = 0; i < 10; i += 0.001)
+    {
+        double G_val = G_s(i);
+        fprintf(fp, "%f   %f\n", i, G_val);
     }
 
     fclose(fp);
