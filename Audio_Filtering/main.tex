@@ -1,53 +1,3 @@
-% \let\negmedspace\undefined
-% \let\negthickspace\undefined
-% \documentclass[journal,12pt,twocolumn]{IEEEtran}
-% %
-% \usepackage{setspace}
-% % \usepackage{gensymb}
-% \usepackage{xcolor}
-% \usepackage{caption}
-% % \usepackage{gvv}
-
-% \singlespacing
-
-% \usepackage[cmex10]{amsmath}
-% \usepackage{mathtools}
-
-% \usepackage{hyperref}
-% \usepackage{amsthm}
-% \usepackage{mathrsfs}
-% \usepackage{txfonts}
-% \usepackage{stfloats}
-% \usepackage{cite}
-% \usepackage{cases}
-% \usepackage{subfig}
-
-% \usepackage{longtable}
-% \usepackage{multirow}
-
-% \usepackage{enumitem}
-% \usepackage{mathtools}
-
-% \usepackage{listings}
-
-% \DeclareMathOperator*{\Res}{Res}
-
-% \renewcommand\thesection{\arabic{section}}
-% \renewcommand\thesubsection{\thesection.\arabic{subsection}}
-% \renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
-
-% \renewcommand\thesectiondis{\arabic{section}}
-% \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
-% \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
-
-% \hyphenation{op-tical net-works semi-conduc-tor}
-
-% \lstset{
-% language=Python,
-% frame=single, 
-% breaklines=true,
-% columns=fullflexible
-% }
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
@@ -111,74 +61,18 @@ columns=fullflexible
 
 
 \begin{document}
-%
-
-% \theoremstyle{definition}
-% \newtheorem{theorem}{Theorem}[section]
-% \newtheorem{problem}{Problem}
-% \newtheorem{proposition}{Proposition}[section]
-% \newtheorem{lemma}{Lemma}[section]
-% \newtheorem{corollary}[theorem]{Corollary}
-% \newtheorem{example}{Example}[section]
-% \newtheorem{definition}{Definition}[section]
-% %\newtheorem{algorithm}{Algorithm}[section]
-% %\newtheorem{cor}{Corollary}
-% \newcommand{\BEQA}{\begin{eqnarray}}
-% \newcommand{\EEQA}{\end{eqnarray}}
-% \newcommand{\define}{\stackrel{\triangle}{=}}
 
 \bibliographystyle{IEEEtran}
-%\bibliographystyle{ieeetr}
 
-% \providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr
-% \providecommand{\nPr}[2]{\,^{#1}P_{#2}} % nPr
-% \providecommand{\mbf}{\mathbf}
-% \providecommand{\pr}[1]{\ensuremath{\Pr\left#1\right)}}
-% \providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
-% \providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
-% \providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
-% \providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
-% \providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
-% \providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
-% \providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
-% \providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
-% \providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
-% \providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
-% \theoremstyle{remark}
-% \newtheorem{rem}{Remark}
-% \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-% \providecommand{\abs}[1]{\ensuremath{\left\vert#1\right\vert}}
-% \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
-% \providecommand{\norm}[1]{\lVert#1\rVert}
-% \providecommand{\mtx}[1]{\mathbf{#1}}
-% \providecommand{\mean}[1]{\ensuremath{\left[ #1 \right]}}
-% \providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
-% \providecommand{\ztrans}{\overset{\mathcal{Z}}{ \rightleftharpoons}}
-
-% \providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
-% \providecommand{\system}{\overset{\mathcal{Z}}{ \longleftrightarrow}}
-% 	% \newcommand{\solution}[2]{\textbf{Solution:}{#1}}
-% \newcommand{\solution}{\noindent \textbf{Solution: }}
-% \providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
 \numberwithin{equation}{section}
 
 
-% \makeatletter
-% \@addtoreset{figure}{problem}
-% \makeatother
 
-% \let\StandardTheFigure\thefigure
 \renewcommand{\thefigure}{\theproblem.\arabic{figure}}
 \renewcommand{\thefigure}{\theproblem}
 
 
-%\numberwithin{figure}{subsection}
 
-% \def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
-%      \def\rightbox#1{\makebox[0in][r]{#1}}
-%      \def\centbox#1{\makebox[0in]{#1}}
-%      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
-%      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 
 \vspace{3cm}
 
@@ -212,12 +106,9 @@ sudo pip install cffi pysoundfile
 \label{prob:input}
 Download the sound file from  
 \begin{lstlisting}
-wget https://raw.githubusercontent.com/gadepall/ 
-EE1310/master/filter/codes/Sound_Noise.wav
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/2.wav
 \end{lstlisting}
-%\href{http://tlc.iith.ac.in/img/sound/Sound_Noise.wav}{\url{http://tlc.iith.ac.in/img/sound/Sound_Noise.wav}}  
-%in the link given below.
-%\linebreak
+
 \item
 \label{prob:spectrogram}
 You will find a spectrogram at \href{https://academo.org/demos/spectrum-analyzer}{\url{https://academo.org/demos/spectrum-analyzer}}. 
@@ -246,7 +137,7 @@ import soundfile as sf
 from scipy import signal
 
 # Read .wav file
-input_signal, fs = sf.read('2.wav')
+inpu_signal, fs = sf.read('2.wav')
 
 # Order of the filter
 order = 4
@@ -294,7 +185,7 @@ Sketch $x(n)$.\\
 
 \solution The following code yields Fig. \ref{fig:x_n}.
 \begin{lstlisting}
-wget https://github.com/gadepall/EE1310/raw/master/filter/codes/3.1.py
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/3.1.py
 \end{lstlisting}
 \begin{figure}[!h]
     \centering
@@ -312,9 +203,11 @@ y(n) + \frac{1}{2}y(n-1) = x(n) + x(n-2),
 \end{multline}
 Sketch $y(n)$.
 \\
-\solution The following code yields Fig. \ref{fig:y_n}.
+\solution The following codes yield Fig. \ref{fig:y_n}.
 \begin{lstlisting}
-wget https://github.com/gadepall/EE1310/raw/master/filter/codes/3.2.py
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/3.2.c
+
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/3.2.py
 \end{lstlisting}
 \begin{figure}[!h]
 \begin{center}
@@ -436,9 +329,11 @@ H\brak{e^{j \omega}} = H\brak{z = e^{j \omega}}.
 Plot $\abs{H\brak{e^{j \omega}}}$.  Comment.  $H(e^{j \omega})$ is
 known as the {\em Discrete Time Fourier Transform} (DTFT) of $h(n)$.
 \\
-\solution The following code plots Fig. \ref{fig:dtft}.
+\solution The following codes plot Fig. \ref{fig:dtft}.
 \begin{lstlisting}
-wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/dtft.py
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/4.5.c
+
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/4.5.py
 \end{lstlisting}
 \begin{figure}[!h]
 \centering
@@ -487,7 +382,9 @@ using \eqref{eq:anun} and \eqref{eq:4.11}.
 \\
 \solution The following code plots Fig. \ref{fig:hn}.
 \begin{lstlisting}
-wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/hn.py
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/5.2.c
+
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/5.2.py
 \end{lstlisting}
 \begin{figure}[!ht]
 \centering
@@ -529,7 +426,9 @@ This is the definition of $h(n)$.
 \ref{fig:hn}. 
 %
 \begin{lstlisting}
-wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/hndef.py
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/5.4.c
+
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/5.4.py
 \end{lstlisting}
 \begin{figure}[!ht]
 \centering
@@ -549,12 +448,14 @@ Comment. The operation in \eqref{eq:convolution} is known as
 {\em convolution}.
 %
 \\
-\solution The following code plots Fig. \ref{fig:ynconv}. Note that this is the same as 
+\solution The following codes plot Fig. \ref{fig:ynconv}. Note that this is the same as 
 $y(n)$ in  Fig. 
 \ref{fig:y_n}. 
 %
 \begin{lstlisting}
-wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/ynconv.py
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/5.5.c
+
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/5.5.py
 \end{lstlisting}
 \begin{figure}[!ht]
 \centering
@@ -562,7 +463,7 @@ wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/yncon
 \caption{$y(n)$ using convolution}
 \label{fig:ynconv}
 \end{figure}
-
+\newpage
 \item Show that
 \begin{equation}
 y(n) =  \sum_{k=-\infty}^{\infty}x(n-k)h(k)
@@ -579,9 +480,14 @@ Substitute $k \to n-k$
 \end{align}
 as flipping limits does not change sum.\\
 
-The following code plots Fig. \ref{fig:5.6}. Note that this is the same as 
+The following codes plot Fig. \ref{fig:5.6}. Note that this is the same as 
 $y(n)$ in  Fig. 
 \ref{fig:ynconv}.
+\begin{lstlisting}
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/5.6.c
+
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/5.6.py
+\end{lstlisting}
 \begin{figure}[!h]
     \centering
     \includegraphics[width = \columnwidth]{figs/5.6.png}
@@ -589,7 +495,7 @@ $y(n)$ in  Fig.
     \label{fig:5.6}
 \end{figure}
 \end{enumerate}
-
+\newpage
 \section{DFT and FFT}
 \begin{enumerate}[label=\thesection.\arabic*]
 \item
@@ -612,7 +518,7 @@ $y(n)$ in  Fig.
 \ref{fig:y_n}. It also prints out the values of $X(k)$, $H(k)$, $Y(k)$, and $y(n)$.
 %
 \begin{lstlisting}
-wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/yndft.py
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/6.123.py
 \end{lstlisting}
 \begin{figure}[!ht]
 \centering
@@ -620,11 +526,14 @@ wget https://raw.githubusercontent.com/gadepall/EE1310/master/filter/codes/yndft
 \caption{$y(n)$ from IDFT}
 \label{fig:yndft}
 \end{figure}
-
+\newpage
 \item Repeat the previous exercise by computing $X(k), H(k)$ and $y(n)$ through FFT and 
 IFFT.\\
 
 \solution The code below calculates $X(k)$, $H(k)$ using FFT and plots the graph of $y(n)$ using IFFT and IDFT both (to compare).
+\begin{lstlisting}
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/6.4.py
+\end{lstlisting}
 \begin{figure}[!h]
     \centering
     \includegraphics[width = \columnwidth]{figs/6.4.png}
@@ -632,7 +541,6 @@ IFFT.\\
     \label{fig:enter-label}
 \end{figure}
 
-\newpage
 \item Wherever possible, express all the above equations as matrix equations.
 \\
 
@@ -671,7 +579,7 @@ where $\odot$ represents the Hadamard product which multiplies corresponding ele
 
 The below code computes $y\brak{n}$ by DFT Matrix and then plots it.
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/5.5.py
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/6.5.py
 \end{lstlisting}
 \begin{figure}[!h]
     \centering
@@ -687,7 +595,7 @@ Answer the following questions by looking at the python code in Problem \ref{pro
 \item
 The command
 \begin{lstlisting}
-	output_signal = signal.lfilter(b, a, input_signal)
+output_signal = signal.lfilter(b, a, input_signal)
 	\end{lstlisting}
 in Problem \ref{prob:output} is executed through the following difference equation
 \begin{equation}
@@ -701,9 +609,8 @@ where the input signal is $x(n)$ and the output signal is $y(n)$ with initial va
 
 \solution The code below plots the output of scipy.signal.lfilter and the output of custom function on the same graph.
 \begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/5.5.py
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/lfilter.py
 \end{lstlisting}
-\newpage
 \begin{figure}[!h]
     \centering
     \includegraphics[width = \columnwidth]{figs/lfilter.png}
@@ -754,6 +661,10 @@ Inverse of \eqref{eq:7.6} is given using:
     \delta\brak{n-k} &\system z^{-k}\\
     \implies h(n) &= \sum_{i}r(i)[p(i)]^nu(n) + \sum_{j}k(j)\delta(n - j)
 \end{align}
+Code to plot $h(n)$:
+\begin{lstlisting}
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/7.2hn.py
+\end{lstlisting}
 
 \textbf{Plot of h(n)}:
 \begin{figure}[!h]
@@ -762,7 +673,11 @@ Inverse of \eqref{eq:7.6} is given using:
     \caption{Plot of $h(n)$}
     \label{fig:7.2}
 \end{figure}
-\newpage
+
+Code to plot Pole-Zero Plot:
+\begin{lstlisting}
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/7.2pole.py
+\end{lstlisting}
 \begin{figure}[!h]
     \centering
     \includegraphics[width = \columnwidth]{figs/7.2zp.png}
@@ -780,8 +695,11 @@ H\brak{z} &= \sum_{n = 0}^{\infty} h\brak{n}z^{-n}\\
 as both $a\brak{k}$ and $b\brak{k}$ are finite length sequences.\\
 Then, \eqref{eq:5.6} implies $h(n)$ is impulse response of a stable system.
 \\
+Code to plot Frequency Response:
+\begin{lstlisting}
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/7.2hw.py
+\end{lstlisting}
 
-\newpage
 \textbf{Frequency Response of Butterworth Filter}
 \begin{figure}[!h]
     \centering
@@ -796,6 +714,10 @@ To convert to analog domain, we can use the Bilinear Transform where we substitu
 \begin{align}
     z=\frac{1+\frac{sT}{2}}{{1-\frac{sT}{2}}}
 \end{align}
+Code to plot Frequency Response in Analog Domain:
+\begin{lstlisting}
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/7.2bt.py
+\end{lstlisting}
 \begin{figure}[!h]
     \centering
     \includegraphics[width = \columnwidth]{figs/7.2bt.png}
@@ -807,19 +729,24 @@ To convert to analog domain, we can use the Bilinear Transform where we substitu
 \\
 \solution The below C code implements the FFT algorithm:
 \begin{lstlisting}
-    k
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/7.3.c
 \end{lstlisting}
 Run the following command to generate a shared library '7.3.so':
 \begin{lstlisting}
-    gcc -shared -o 7.3.so -fPIC 7.3.c
+gcc -shared -o 7.3.so -fPIC 7.3.c
 \end{lstlisting}
 The C code is called in the following Python code and output is printed. It can be seen that the same output is printed through both codes.
-\\
+\begin{lstlisting}
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/7.3.py
+\end{lstlisting}
+
 \item Find the Time Complexities of computing $y(n)$ using FFT/IFFT and convolution and compare. 
 \\
 \solution The below codes generate and plot the time complexities of computing $y(n)$ using FFT/IFFT and Convolution:
 \begin{lstlisting}
-    iva
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/7.4.c
+
+wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/7.4.py
 \end{lstlisting}
 \begin{figure}[!h]
     \centering
@@ -847,4 +774,3 @@ Modifying the code with different input parameters and to get the best possible 
 \end{enumerate}
 
 \end{document}
-

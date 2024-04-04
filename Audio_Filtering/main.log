@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.1)  5 APR 2024 00:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.1)  5 APR 2024 01:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1193,101 +1193,92 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 1
-13.
+LaTeX Font Info:    Trying to load font information for OT1+txr on input line 6
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 113.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 63.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-113.
+63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 63.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-113.
+63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 63.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-113.
+63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 113.
-LaTeX Font Info:    Trying to load font information for U+txexa on input line 1
-13.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 63.
+LaTeX Font Info:    Trying to load font information for U+txexa on input line 6
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 113.
-LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <6> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 113.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <6> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 113.
-
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <8> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 113.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <8> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 113.
-
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <9> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 113.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <9> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 113.
-
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 113.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <10> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 113.
-
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <12> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 113.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <12> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 113.
-
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <14> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 113.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <14> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 113.
-
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <20> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 113.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <20> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 113.
-
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <22> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 113.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <22> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 113.
-
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <24> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 113.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 63.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <24> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 113.
-
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 63.
 
 -- Lines per column: 50 (exact).
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1315,16 +1306,16 @@ e
 \c@lstlisting=\count356
 \symgns@font=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/txr/m/n --> TS1/txr/b/n on input line 113.
-Package gensymb Info: Math companion symbols declared on input line 113.
-LaTeX Info: Redefining \degree on input line 113.
-LaTeX Info: Redefining \celsius on input line 113.
+(Font)                  TS1/txr/m/n --> TS1/txr/b/n on input line 63.
+Package gensymb Info: Math companion symbols declared on input line 63.
+LaTeX Info: Redefining \degree on input line 63.
+LaTeX Info: Redefining \celsius on input line 63.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 113.
-LaTeX Info: Redefining \ohm on input line 113.
-Package gensymb Info: Using \textohm for \ohm on input line 113.
-Package gensymb Info: Using \textmu for \micro on input line 113.
-Package hyperref Info: Link coloring OFF on input line 113.
+erthousand on input line 63.
+LaTeX Info: Redefining \ohm on input line 63.
+Package gensymb Info: Using \textohm for \ohm on input line 63.
+Package gensymb Info: Using \textmu for \micro on input line 63.
+Package hyperref Info: Link coloring OFF on input line 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1337,9 +1328,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count357
 )
-LaTeX Info: Redefining \ref on input line 113.
-LaTeX Info: Redefining \pageref on input line 113.
-LaTeX Info: Redefining \nameref on input line 113.
+LaTeX Info: Redefining \ref on input line 63.
+LaTeX Info: Redefining \pageref on input line 63.
+LaTeX Info: Redefining \nameref on input line 63.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
@@ -1347,33 +1338,33 @@ LaTeX Info: Redefining \nameref on input line 113.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 190.
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 1
-90.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 84.
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 8
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 1
-90.
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 8
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 1
-90.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 8
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 1
-90.
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 8
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 1
-90.
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 8
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
@@ -1382,20 +1373,20 @@ File: ts1txr.fd 2000/12/15 v3.1
 \openout6 = `main.toc'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--227
+Underfull \hbox (badness 10000) in paragraph at lines 116--118
 
  []
 
 <figs/unfiltered.png, id=45, 925.20656pt x 619.56468pt>
 File: figs/unfiltered.png Graphic file (type png)
 <use figs/unfiltered.png>
-Package pdftex.def Info: figs/unfiltered.png  used on input line 232.
+Package pdftex.def Info: figs/unfiltered.png  used on input line 123.
 (pdftex.def)             Requested size: 252.0pt x 168.75003pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--241
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
 
  []
 
@@ -1403,241 +1394,238 @@ Underfull \hbox (badness 10000) in paragraph at lines 239--241
 
 
  <./figs/unfiltered.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 272--274
+Underfull \hbox (badness 10000) in paragraph at lines 163--165
 
  []
 
-<figs/filtered.png, id=101, 922.94812pt x 621.82312pt>
+<figs/filtered.png, id=100, 922.94812pt x 621.82312pt>
 File: figs/filtered.png Graphic file (type png)
 <use figs/filtered.png>
-Package pdftex.def Info: figs/filtered.png  used on input line 278.
+Package pdftex.def Info: figs/filtered.png  used on input line 169.
 (pdftex.def)             Requested size: 252.0pt x 169.78264pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--294
+Underfull \hbox (badness 10000) in paragraph at lines 183--185
 
  []
 
-<figs/3.1.png, id=103, 462.528pt x 346.896pt>
+<figs/3.1.png, id=102, 462.528pt x 346.896pt>
 File: figs/3.1.png Graphic file (type png)
 <use figs/3.1.png>
-Package pdftex.def Info: figs/3.1.png  used on input line 301.
+Package pdftex.def Info: figs/3.1.png  used on input line 192.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/3.2.png, id=105, 462.528pt x 346.896pt>
+<figs/3.2.png, id=104, 462.528pt x 346.896pt>
 File: figs/3.2.png Graphic file (type png)
 <use figs/3.2.png>
-Package pdftex.def Info: figs/3.2.png  used on input line 321.
+Package pdftex.def Info: figs/3.2.png  used on input line 214.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 [2 <./figs/filtered.png> <./figs/3.1.png> <./figs/3.2.png>]
 <figs/4.5.png, id=142, 462.528pt x 346.896pt>
 File: figs/4.5.png Graphic file (type png)
 <use figs/4.5.png>
-Package pdftex.def Info: figs/4.5.png  used on input line 445.
+Package pdftex.def Info: figs/4.5.png  used on input line 340.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3]
-<figs/5.2.png, id=188, 462.528pt x 346.896pt>
+<figs/5.2.png, id=191, 462.528pt x 346.896pt>
 File: figs/5.2.png Graphic file (type png)
 <use figs/5.2.png>
-Package pdftex.def Info: figs/5.2.png  used on input line 494.
-(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<figs/5.4.png, id=194, 462.528pt x 346.896pt>
-File: figs/5.4.png Graphic file (type png)
-<use figs/5.4.png>
-Package pdftex.def Info: figs/5.4.png  used on input line 536.
+Package pdftex.def Info: figs/5.2.png  used on input line 391.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
  [4 <./figs/4.5.png> <./figs/5.2.png>]
-<figs/5.5.png, id=223, 462.528pt x 346.896pt>
+<figs/5.4.png, id=223, 462.528pt x 346.896pt>
+File: figs/5.4.png Graphic file (type png)
+<use figs/5.4.png>
+Package pdftex.def Info: figs/5.4.png  used on input line 435.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+<figs/5.5.png, id=227, 462.528pt x 346.896pt>
 File: figs/5.5.png Graphic file (type png)
 <use figs/5.5.png>
-Package pdftex.def Info: figs/5.5.png  used on input line 561.
+Package pdftex.def Info: figs/5.5.png  used on input line 462.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 579--581
+Underfull \hbox (badness 10000) in paragraph at lines 480--482
 
  []
 
-<figs/5.6.png, id=227, 462.528pt x 346.896pt>
+<figs/5.6.png, id=231, 462.528pt x 346.896pt>
 File: figs/5.6.png Graphic file (type png)
 <use figs/5.6.png>
-Package pdftex.def Info: figs/5.6.png  used on input line 587.
+Package pdftex.def Info: figs/5.6.png  used on input line 493.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-Overfull \hbox (1.22874pt too wide) detected at line 608
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5 <./figs/5.4.png> <./figs/5.5.png>]
+Overfull \hbox (1.22874pt too wide) detected at line 514
 [][][]\OML/txmi/m/it/12 y [] \OT1/txr/m/n/12 = [] [] \OML/txmi/m/it/12 Y [] \OM
 S/txsy/m/n/12 ^^A \OML/txmi/m/it/12 e[];  n \OT1/txr/m/n/12 = 0\OML/txmi/m/it/1
 2 ; \OT1/txr/m/n/12 1\OML/txmi/m/it/12 ; [] ; N \OMS/txsy/m/n/12 ^^@ \OT1/txr/m
 /n/12 1
  []
 
-[5 <./figs/5.4.png> <./figs/5.5.png> <./figs/5.6.png>]
-<figs/6.1.png, id=257, 462.528pt x 346.896pt>
+<figs/6.1.png, id=265, 462.528pt x 346.896pt>
 File: figs/6.1.png Graphic file (type png)
 <use figs/6.1.png>
-Package pdftex.def Info: figs/6.1.png  used on input line 619.
+Package pdftex.def Info: figs/6.1.png  used on input line 525.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 624--626
+Underfull \hbox (badness 10000) in paragraph at lines 530--532
 
  []
 
-<figs/6.4.png, id=258, 462.528pt x 346.896pt>
+<figs/6.4.png, id=266, 462.528pt x 346.896pt>
 File: figs/6.4.png Graphic file (type png)
 <use figs/6.4.png>
-Package pdftex.def Info: figs/6.4.png  used on input line 630.
+Package pdftex.def Info: figs/6.4.png  used on input line 539.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 2717) in paragraph at lines 636--638
+Underfull \hbox (badness 2717) in paragraph at lines 544--546
 []\OT1/txr/m/n/12 Wherever pos-si-ble, ex-press all the above
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 636--638
+Underfull \hbox (badness 10000) in paragraph at lines 544--546
 
  []
 
-[6 <./figs/6.1.png> <./figs/6.4.png>]
-<figs/6.5.png, id=279, 462.528pt x 346.896pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./figs/5.6.png> <./figs/6.1.png> <./figs/6.4.png>]
+<figs/6.5.png, id=289, 462.528pt x 346.896pt>
 File: figs/6.5.png Graphic file (type png)
 <use figs/6.5.png>
-Package pdftex.def Info: figs/6.5.png  used on input line 678.
+Package pdftex.def Info: figs/6.5.png  used on input line 586.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 696--701
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 604--609
 
  []
 
-<figs/lfilter.png, id=282, 462.528pt x 346.896pt>
+<figs/lfilter.png, id=292, 462.528pt x 346.896pt>
 File: figs/lfilter.png Graphic file (type png)
 <use figs/lfilter.png>
-Package pdftex.def Info: figs/lfilter.png  used on input line 709.
+Package pdftex.def Info: figs/lfilter.png  used on input line 616.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-Underfull \hbox (badness 3158) in paragraph at lines 714--715
+Underfull \hbox (badness 3158) in paragraph at lines 621--622
 []\OT1/txr/m/n/12 Repeat all the ex-er-cises in the pre-vi-ous
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 714--715
+Underfull \hbox (badness 10000) in paragraph at lines 621--622
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 716--724
+Underfull \hbox (badness 10000) in paragraph at lines 623--631
 \OT1/txr/bx/n/12 Solution: \OT1/txr/m/n/12 The code in []2.3[] cal-cu-lates
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 716--724
+Underfull \hbox (badness 10000) in paragraph at lines 623--631
 \OT1/txr/m/n/12 val-ues of a and b and prints them:
  []
 
 
-Overfull \hbox (19.22105pt too wide) in paragraph at lines 716--724
+Overfull \hbox (19.22105pt too wide) in paragraph at lines 623--631
 []$
  []
 
-
-Overfull \hbox (6.91942pt too wide) detected at line 741
+[7 <./figs/6.5.png> <./figs/lfilter.png>]
+Overfull \hbox (6.91942pt too wide) detected at line 648
 []
  []
 
-[7 <./figs/6.5.png> <./figs/lfilter.png>] (./tables/residues.tex
+(./tables/residues.tex
 Overfull \hbox (11.15462pt too wide) in paragraph at lines 4--13
  [][] 
  []
 
 )
-Overfull \hbox (5.85815pt too wide) detected at line 756
+Overfull \hbox (5.85815pt too wide) detected at line 663
 []
  []
 
-<figs/7.2hn.png, id=309, 462.528pt x 346.896pt>
+<figs/7.2hn.png, id=320, 462.528pt x 346.896pt>
 File: figs/7.2hn.png Graphic file (type png)
 <use figs/7.2hn.png>
-Package pdftex.def Info: figs/7.2hn.png  used on input line 761.
+Package pdftex.def Info: figs/7.2hn.png  used on input line 672.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<figs/7.2zp.png, id=310, 462.528pt x 346.896pt>
+<figs/7.2zp.png, id=321, 462.528pt x 346.896pt>
 File: figs/7.2zp.png Graphic file (type png)
 <use figs/7.2zp.png>
-Package pdftex.def Info: figs/7.2zp.png  used on input line 768.
+Package pdftex.def Info: figs/7.2zp.png  used on input line 683.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 772--773
-
- []
-
-
-Underfull \hbox (badness 2644) in paragraph at lines 779--783
-\OT1/txr/m/n/12 as both $\OML/txmi/m/it/12 a []$ \OT1/txr/m/n/12 and $\OML/txmi
-/m/it/12 b []$ \OT1/txr/m/n/12 are fi-nite length
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 779--783
+Underfull \hbox (badness 10000) in paragraph at lines 687--688
 
  []
 
 [8 <./figs/7.2hn.png> <./figs/7.2zp.png>]
-<figs/7.2hw.png, id=328, 462.528pt x 346.896pt>
+<figs/7.2hw.png, id=344, 462.528pt x 346.896pt>
 File: figs/7.2hw.png Graphic file (type png)
 <use figs/7.2hw.png>
-Package pdftex.def Info: figs/7.2hw.png  used on input line 788.
+Package pdftex.def Info: figs/7.2hw.png  used on input line 706.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
-<figs/7.2bt.png, id=329, 462.528pt x 346.896pt>
+<figs/7.2bt.png, id=345, 462.528pt x 346.896pt>
 File: figs/7.2bt.png Graphic file (type png)
 <use figs/7.2bt.png>
-Package pdftex.def Info: figs/7.2bt.png  used on input line 801.
+Package pdftex.def Info: figs/7.2bt.png  used on input line 723.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 816--818
 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/7.4.png, id=330, 462.528pt x 346.896pt>
+<figs/7.4.png, id=346, 462.528pt x 346.896pt>
 File: figs/7.4.png Graphic file (type png)
 <use figs/7.4.png>
-Package pdftex.def Info: figs/7.4.png  used on input line 826.
+Package pdftex.def Info: figs/7.4.png  used on input line 753.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-Underfull \hbox (badness 2310) in paragraph at lines 830--832
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 2310) in paragraph at lines 757--759
 \OT1/txr/m/n/12 Time com-plex-ity of FFT/IFFT method is
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 830--832
+Underfull \hbox (badness 10000) in paragraph at lines 757--759
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 832--838
+Underfull \hbox (badness 10000) in paragraph at lines 759--765
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 838--844
+[9 <./figs/7.2hw.png> <./figs/7.2bt.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 765--771
 
  []
 
-[9 <./figs/7.2hw.png> <./figs/7.2bt.png> <./figs/7.4.png>] [10
+[10
 
-] (./main.aux)
+ <./figs/7.4.png>] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: EDE0BD39395C52B880A8A7EB6EB76C7D;824.
  ) 
 Here is how much of TeX's memory you used:
- 45330 strings out of 478287
- 1035660 string characters out of 5849290
- 1895055 words of memory out of 5000000
- 62583 multiletter control sequences out of 15000+600000
+ 45348 strings out of 478287
+ 1035945 string characters out of 5849290
+ 1892056 words of memory out of 5000000
+ 62574 multiletter control sequences out of 15000+600000
  552637 words of font info for 209 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  115i,17n,118p,424b,1992s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1652,10 +1640,10 @@ texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (10 pages, 508695 bytes).
+Output written on main.pdf (10 pages, 511038 bytes).
 PDF statistics:
- 453 PDF objects out of 1000 (max. 8388607)
- 376 compressed objects within 4 object streams
- 195 named destinations out of 1000 (max. 500000)
+ 488 PDF objects out of 1000 (max. 8388607)
+ 410 compressed objects within 5 object streams
+ 222 named destinations out of 1000 (max. 500000)
  159 words of extra memory for PDF output out of 10000 (max. 10000000)
 
