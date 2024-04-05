@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.1)  5 APR 2024 20:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.1)  5 APR 2024 23:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1587,45 +1587,61 @@ Package pdftex.def Info: figs/7.2bt.png  used on input line 723.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/7.4.png, id=346, 462.528pt x 346.896pt>
-File: figs/7.4.png Graphic file (type png)
-<use figs/7.4.png>
-Package pdftex.def Info: figs/7.4.png  used on input line 753.
+<figs/input.png, id=346, 462.528pt x 346.896pt>
+File: figs/input.png Graphic file (type png)
+<use figs/input.png>
+Package pdftex.def Info: figs/input.png  used on input line 740.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+<figs/output.png, id=347, 462.528pt x 346.896pt>
+File: figs/output.png Graphic file (type png)
+<use figs/output.png>
+Package pdftex.def Info: figs/output.png  used on input line 746.
 (pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[9 <./figs/7.2hw.png> <./figs/7.2bt.png> <./figs/input.png>]
+<figs/7.2dft.png, id=369, 462.528pt x 346.896pt>
+File: figs/7.2dft.png Graphic file (type png)
+<use figs/7.2dft.png>
+Package pdftex.def Info: figs/7.2dft.png  used on input line 758.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
+<figs/7.4.png, id=370, 462.528pt x 346.896pt>
+File: figs/7.4.png Graphic file (type png)
+<use figs/7.4.png>
+Package pdftex.def Info: figs/7.4.png  used on input line 787.
+(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
 
-Underfull \hbox (badness 2310) in paragraph at lines 757--759
+Underfull \hbox (badness 2310) in paragraph at lines 791--793
 \OT1/txr/m/n/12 Time com-plex-ity of FFT/IFFT method is
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 757--759
+Underfull \hbox (badness 10000) in paragraph at lines 791--793
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--765
+Underfull \hbox (badness 10000) in paragraph at lines 793--799
 
  []
 
-[9 <./figs/7.2hw.png> <./figs/7.2bt.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 765--771
+
+Underfull \hbox (badness 10000) in paragraph at lines 799--805
 
  []
 
-[10
+[10 <./figs/output.png> <./figs/7.2dft.png> <./figs/7.4.png>] [11
 
- <./figs/7.4.png>] (./main.aux)
+] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: EDE0BD39395C52B880A8A7EB6EB76C7D;824.
  ) 
 Here is how much of TeX's memory you used:
- 45348 strings out of 478287
- 1035945 string characters out of 5849290
+ 45379 strings out of 478287
+ 1036488 string characters out of 5849290
  1892057 words of memory out of 5000000
- 62574 multiletter control sequences out of 15000+600000
+ 62595 multiletter control sequences out of 15000+600000
  552637 words of font info for 209 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  115i,17n,118p,424b,1992s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1640,10 +1656,10 @@ texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (10 pages, 511038 bytes).
+Output written on main.pdf (11 pages, 563652 bytes).
 PDF statistics:
- 488 PDF objects out of 1000 (max. 8388607)
- 410 compressed objects within 5 object streams
- 222 named destinations out of 1000 (max. 500000)
- 159 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 508 PDF objects out of 1000 (max. 8388607)
+ 423 compressed objects within 5 object streams
+ 231 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
 

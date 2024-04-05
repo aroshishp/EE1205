@@ -725,6 +725,40 @@ wget https://github.com/aroshishp/EE1205/blob/main/Audio_Filtering/codes/7.2bt.p
     \label{fig:7.2bt}
 \end{figure}
 
+\textbf{Convolution}\\
+We calculate
+\begin{equation}
+    y(n) = x(n)*h(n) = \sum_{k=-\infty}^{\infty}x(k)h(n-k) 
+\end{equation}
+
+through the following code. The code plots input signal $x(n)$ and output $y(n)$ obtained from lfilter and through convolution.
+\begin{lstlisting}
+wget 
+\end{lstlisting}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/input.png}
+    \caption{Plot of Input Signal $x(n)$}
+    \label{fig:input}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/output.png}
+    \caption{Plot of Output Signal $y(n)$ from lfilter and convolution}
+    \label{fig:output}
+\end{figure}
+\newpage
+\textbf{DFT and FFT}\\
+Code to calculate DFT/IDFT and FFT/IFFT are written below. $y(n)$ is plotted from lfilter output, DFT/IDFT and FFT/IFFT on the same graph and they overlap.
+\begin{lstlisting}
+wget 
+\end{lstlisting}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = \columnwidth]{figs/7.2dft.png}
+    \caption{Plot of Output Signal from above mentioned methods}
+    \label{fig:output_dft}
+\end{figure}
 \item Implement your own FFT routine in C and call this FFT in python
 \\
 \solution The below C code implements the FFT algorithm:
