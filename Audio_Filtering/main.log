@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.1)  5 APR 2024 23:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.1)  5 APR 2024 23:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1638,10 +1638,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: EDE0BD39395C52B880A8A7EB6EB76C7D;824.
  ) 
 Here is how much of TeX's memory you used:
- 45379 strings out of 478287
- 1036488 string characters out of 5849290
+ 45381 strings out of 478287
+ 1036505 string characters out of 5849290
  1892057 words of memory out of 5000000
- 62595 multiletter control sequences out of 15000+600000
+ 62597 multiletter control sequences out of 15000+600000
  552637 words of font info for 209 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  115i,17n,118p,424b,1992s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1656,7 +1656,7 @@ texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (11 pages, 563652 bytes).
+Output written on main.pdf (11 pages, 563797 bytes).
 PDF statistics:
  508 PDF objects out of 1000 (max. 8388607)
  423 compressed objects within 5 object streams
