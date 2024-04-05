@@ -23,7 +23,8 @@ def custom_lfilter(b, a, x):
 
 
 # Load the input audio
-x, fs = sf.read('Dhanush-Singing.wav')
+x, fs = sf.read('2.wav')
+print(fs)
 
 # Order of the filter
 order = 4
