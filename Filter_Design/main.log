@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.1)  12 APR 2024 03:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.1)  12 APR 2024 03:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -200,112 +200,105 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/pole_zero.png, id=31, 578.16pt x 433.62pt>
+[5 <./figs/low_pass.png>]
+<figs/pole_zero.png, id=35, 578.16pt x 433.62pt>
 File: figs/pole_zero.png Graphic file (type png)
 <use figs/pole_zero.png>
 Package pdftex.def Info: figs/pole_zero.png  used on input line 195.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5 <./figs/low_pass.png>]
-
-LaTeX Warning: Text page 6 contains only floats.
-
-[6 <./figs/pole_zero.png>]
-<figs/verification.png, id=40, 462.528pt x 346.896pt>
+[6]
+<figs/verification.png, id=39, 462.528pt x 346.896pt>
 File: figs/verification.png Graphic file (type png)
 <use figs/verification.png>
 Package pdftex.def Info: figs/verification.png  used on input line 217.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
- [7 <./figs/verification.png>]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7 <./figs/pole_zero.png>]
 Overfull \hbox (50.17476pt too wide) detected at line 238
 []\OML/cmm/m/it/5 H[]\OT1/cmr/m/n/5 (\OML/cmm/m/it/5 s\OT1/cmr/m/n/5 ) = []
  []
 
-<figs/Hbp.png, id=46, 462.528pt x 346.896pt>
+[8 <./figs/verification.png>]
+<figs/Hbp.png, id=50, 462.528pt x 346.896pt>
 File: figs/Hbp.png Graphic file (type png)
 <use figs/Hbp.png>
 Package pdftex.def Info: figs/Hbp.png  used on input line 249.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[8]
-<figs/H_dbp.png, id=51, 462.528pt x 346.896pt>
+ [9 <./figs/Hbp.png>]
+<figs/H_dbp.png, id=55, 462.528pt x 346.896pt>
 File: figs/H_dbp.png Graphic file (type png)
 <use figs/H_dbp.png>
 Package pdftex.def Info: figs/H_dbp.png  used on input line 288.
-(pdftex.def)             Requested size: 345.0pt x 258.76335pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[9 <./figs/Hbp.png>] [10 <./figs/H_dbp.png>]
-<figs/fir_hlp.png, id=60, 462.528pt x 346.896pt>
+(pdftex.def)             Requested size: 310.4979pt x 232.8849pt.
+ [10 <./figs/H_dbp.png>]
+[11]
+<figs/fir_hlp.png, id=63, 462.528pt x 346.896pt>
 File: figs/fir_hlp.png Graphic file (type png)
 <use figs/fir_hlp.png>
-Package pdftex.def Info: figs/fir_hlp.png  used on input line 364.
+Package pdftex.def Info: figs/fir_hlp.png  used on input line 366.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figs/firHLP.png, id=61, 462.528pt x 346.896pt>
+<figs/firHLP.png, id=64, 462.528pt x 346.896pt>
 File: figs/firHLP.png Graphic file (type png)
 <use figs/firHLP.png>
-Package pdftex.def Info: figs/firHLP.png  used on input line 377.
+Package pdftex.def Info: figs/firHLP.png  used on input line 375.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[11]
-<figs/fir_hbp.png, id=65, 462.528pt x 346.896pt>
+[12 <./figs/fir_hlp.png>]
+<figs/fir_hbp.png, id=69, 462.528pt x 346.896pt>
 File: figs/fir_hbp.png Graphic file (type png)
 <use figs/fir_hbp.png>
 Package pdftex.def Info: figs/fir_hbp.png  used on input line 399.
-(pdftex.def)             Requested size: 345.0pt x 258.76335pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figs/firHbp.png, id=66, 462.528pt x 346.896pt>
+(pdftex.def)             Requested size: 327.74895pt x 245.82149pt.
+<figs/firHbp.png, id=70, 462.528pt x 346.896pt>
 File: figs/firHbp.png Graphic file (type png)
 <use figs/firHbp.png>
-Package pdftex.def Info: figs/firHbp.png  used on input line 410.
-(pdftex.def)             Requested size: 345.0pt x 258.76335pt.
+Package pdftex.def Info: figs/firHbp.png  used on input line 405.
+(pdftex.def)             Requested size: 327.74895pt x 245.82149pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <./figs/fir_hlp.png>] [13 <./figs/firHLP.png>] [14 <./figs/fir_hbp.png>]
-[15 <./figs/firHbp.png>] (./main.aux) ) 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13 <./figs/firHLP.png>] [14 <./figs/fir_hbp.png> <./figs/firHbp.png>]
+(./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3873 strings out of 478287
- 55359 string characters out of 5849290
- 544274 words of memory out of 5000000
- 22051 multiletter control sequences out of 15000+600000
+ 3892 strings out of 478287
+ 55582 string characters out of 5849290
+ 563274 words of memory out of 5000000
+ 22070 multiletter control sequences out of 15000+600000
  474988 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,16n,62p,349b,1237s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmti10.pfb>
-Output written on main.pdf (15 pages, 429047 bytes).
+ 55i,16n,62p,349b,1246s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
+x10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (14 pages, 429985 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 144 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

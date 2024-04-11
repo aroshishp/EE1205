@@ -111,7 +111,7 @@ where
 \begin{align*}
 \Omega_0 &= \sqrt{\Omega_{p1}\Omega_{p2}} = 0.7649\\
 B &= \Omega_{p1} - \Omega_{p2} = 0.1247\\
-\implies \Omega_{L_{p_1}} &= \frac{\Omega_{p_1}^2 - \Omega_{p_1}\Omega_{p_2}}{(\Omega_{p_1} - \Omega_{p_2})\Omega_{p_1}} = 1
+	\implies \Omega_{L_{p_1}} &= \frac{\Omega_{p_1}^2 - \Omega_{p_1}\Omega_{p_2}}{(\Omega_{p_1} - \Omega_{p_2})\Omega_{p_1}} = 1
 \end{align*}
 The low pass filter has
 the pass-band edge at $\Omega_{Lp} = 1$ and stop-band edges at 
@@ -153,7 +153,7 @@ where
 After substituting $\delta = 0.15$ and $\Omega_{L_s} = 1.4976$, 
 we obtain $N \geq 4$ and $0.2897 \leq \epsilon \leq 0.6197$.  In Fig. \ref{fig:low_pass}, we plot $\vert H(j\Omega)\vert$ for a range of values of $\epsilon$, for $N = 4$.  We find that for larger values of $\epsilon$, $|H(j\Omega)|$ decreases in the transition band.  We choose $\epsilon = 0.4$  for our IIR filter design.
 \begin{lstlisting}[caption = {Code for Figure 1}]
-wget 
+wget https://github.com/aroshishp/EE1205/blob/main/Filter_Design/codes/low_pass.py
 \end{lstlisting}
 \begin{figure}[!h]
     \centering
@@ -161,7 +161,7 @@ wget
     \caption{Analog Low-Pass Frequency Response for $0.3 \leq \epsilon \leq 0.6$}
     \label{fig:low_pass}
 \end{figure}
-
+\newpage
 \item {\em The Low Pass Chebyshev Filter:} Thus, we obtain
 \begin{equation}
 \label{lpsqfinal}
@@ -187,7 +187,7 @@ Values of $s_k$ using \eqref{eq: 7} are given in the table below:
 Note that the poles of frequency response in \eqref{lpsqfinal} are calculated through the below code separately and plotted in Figure \ref{fig:2}.\\
 \input{tables/table3}
 \begin{lstlisting}[caption = {Code for Figure 2}]
-wget 
+wget https://github.com/aroshishp/EE1205/blob/main/Filter_Design/codes/poleplot.py
 \end{lstlisting}
 
 \begin{figure}[!h]
@@ -196,7 +196,7 @@ wget
     \caption{Pole-Zero Plot of frequency response of \eqref{lpsqfinal}}
     \label{fig:2}
 \end{figure}
-
+\newpage
 Thus, for even $N$, the low-pass stable Chebyshev filter, with a gain $G_{LP}$ has the form
 \begin{align}
 \label{poleleft}
@@ -210,7 +210,7 @@ H_{a,LP}(s_L) = \frac{0.3125}{s_L^4 + 1.1068s_L^3 + 1.6125s_L^2+0.9140s_L + 0.33
 \end{equation}
 In Figure 3 we plot $|H(j\Omega)|$ using (\ref{lpsqfinal}) and (\ref{lpfinal}), thereby verifying that our low-pass Chebyschev filter design meets the specifications.
 \begin{lstlisting}[caption = {Code for Figure 3}]
-wget 
+wget https://github.com/aroshishp/EE1205/blob/main/Filter_Design/codes/verification.py
 \end{lstlisting}
 \begin{figure}[!h]
     \centering
@@ -241,7 +241,7 @@ In Figure \ref{fig:4}, we plot $\vert H_{a,BP}(j\Omega)\vert$ as a function of $
 well as negative frequencies.  We find that the pass-band and stop-band frequencies in the figure
 match well with those obtained analytically through the bilinear transformation.
 \begin{lstlisting}[caption = {Code for Figure 4}]
-wget 
+wget https://github.com/aroshishp/EE1205/blob/main/Filter_Design/codes/Hbp.py
 \end{lstlisting}
 \end{enumerate}
 \begin{figure}[!h]
@@ -266,7 +266,7 @@ H_{d,BP}(z) = G \frac{N(z)}{D(z)}
 \end{eqnarray}
 All coefficients and $G$ are calculated from the below code.
 \begin{lstlisting}[caption = {Code for G, N(z), D(z)}]
-wget 
+wget https://github.com/aroshishp/EE1205/blob/main/Filter_Design/codes/substitutor.py
 \end{lstlisting}
 
 We get:
@@ -281,11 +281,11 @@ We get:
 The plot of $|H_{d,BP}(z)|$ with respect to the normalized angular freqency (normalizing factor $\pi$) is available in Figure \ref{fig:5}.  Again we
 find that the pass-band and stop-band frequencies meet the specifications well enough.
 \begin{lstlisting}[caption = {Code for Figure 5}]
-wget 
+wget https://github.com/aroshishp/EE1205/blob/main/Filter_Design/codes/Hdbp.py
 \end{lstlisting}
 \begin{figure}[!h]
     \centering
-    \includegraphics[width = \columnwidth]{figs/H_dbp.png}
+    \includegraphics[width = 0.9\columnwidth]{figs/H_dbp.png}
     \caption{The magnitude response of the band-pass digital filter}
     \label{fig:5}
 \end{figure}
@@ -358,20 +358,18 @@ From (\ref{firlpdef}) and (\ref{rect}), we obtain the desired low-pass filter im
 h_{lp}(n) &=& \frac{\sin(\frac{n\pi}{40})}{n\pi} \indent -100 \leq n \leq 100 \nonumber \\
 &=& 0, \hspace{2cm} \mbox{otherwise}
 \end{eqnarray}
-
+\begin{lstlisting}[caption = {Code for Figure 6 and 7}]
+wget https://github.com/aroshishp/EE1205/blob/main/Filter_Design/codes/fir_hH.py
+\end{lstlisting}
 \begin{figure}[!h]
     \centering
     \includegraphics[width = \columnwidth]{figs/fir_hlp.png}
     \caption{Plot of FIR Low-Pass Filter Impulse Response}
     \label{fig:6}
 \end{figure}
-\begin{lstlisting}[caption = {Code for Figure 6}]
-wget 
-\end{lstlisting}
+
 The magnitude of the Frequency Response of low-pass filter is plotted in Figure \ref{fig:7}.
-\begin{lstlisting}[caption = {Code for Figure 7}]
-wget 
-\end{lstlisting}
+
 \begin{figure}[!h]
     \centering
     \includegraphics[width = \columnwidth]{figs/firHLP.png}
@@ -391,23 +389,20 @@ Thus, from (\ref{firlpfinal}), we obtain (plotted in Figure \ref{fig:8})
 h_{bp}(n) &=& \frac{2\sin(\frac{n\pi}{40}) \cos(0.416n\pi)}{n\pi} \indent -100 \leq n \leq 100 \nonumber \\
 &=& 0, \hspace{4cm} \mbox{otherwise}
 \end{eqnarray}
-\begin{lstlisting}[caption = {Code for Figure 8}]
-wget 
+\begin{lstlisting}[caption = {Code for Figure 8 and 9}]
+wget https://github.com/aroshishp/EE1205/blob/main/Filter_Design/codes/fir_bp.py
 \end{lstlisting}
+
+The magnitude response of the FIR band-pass filter designed to meet the given specifications is plotted in Figure \ref{fig:9}.
 \begin{figure}[!h]
     \centering
-    \includegraphics[width = \columnwidth]{figs/fir_hbp.png}
+    \includegraphics[width = 0.95\columnwidth]{figs/fir_hbp.png}
     \caption{Plot of FIR Band-Pass Filter Impulse Response}
     \label{fig:8}
 \end{figure}
-
-The magnitude response of the FIR band-pass filter designed to meet the given specifications is plotted in Figure \ref{fig:9}.
-\begin{lstlisting}[caption = {Code for Figure 9}]
-wget 
-\end{lstlisting}
 \begin{figure}[!h]
     \centering
-    \includegraphics[width = \columnwidth]{figs/firHbp.png}
+    \includegraphics[width = 0.95\columnwidth]{figs/firHbp.png}
     \caption{Plot of FIR Band-Pass Filter Frequency Response}
     \label{fig:9}
 \end{figure}
