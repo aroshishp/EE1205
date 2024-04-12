@@ -111,7 +111,7 @@ where
 \begin{align*}
 \Omega_0 &= \sqrt{\Omega_{p1}\Omega_{p2}} = 0.7649\\
 B &= \Omega_{p1} - \Omega_{p2} = 0.1247\\
-	\implies \Omega_{L_{p_1}} &= \frac{\Omega_{p_1}^2 - \Omega_{p_1}\Omega_{p_2}}{(\Omega_{p_1} - \Omega_{p_2})\Omega_{p_1}} = 1
+	\implies \Omega_{L_{p_1}} &= \frac{\Omega_{p_1}^2 - \Omega_{p_1}}\Omega_{p_2}{(\Omega_{p_1} - \Omega_{p_2})\Omega_{p_1}} = 1
 \end{align*}
 The low pass filter has
 the pass-band edge at $\Omega_{Lp} = 1$ and stop-band edges at 
@@ -229,7 +229,7 @@ Hence,
 \begin{equation}
 H_{a,BP}(s) = G_{BP}H_{a,LP}(s_L)\vert_{s_L = \frac{s^2 + \Omega_0^2}{Bs}},
 \end{equation}
-where $G_{BP}$ is the gain of the band-pass filter. The below code evaluates $G_{BP}$ and finds the coefficients of $H_{a, BP}$. We get $G_{BP} = 1.077$ by evaluating gain  
+where $G_{BP}$ is the gain of the band-pass filter. The code in Listing 5 evaluates $G_{BP}$ and finds the coefficients of $H_{a, BP}$. We get $G_{BP} = 1.077$ by evaluating gain  
 such that $H_{a,BP}(j\Omega_{p1}) = 1$.
 {\tiny
 \begin{equation}
@@ -406,4 +406,4 @@ The magnitude response of the FIR band-pass filter designed to meet the given sp
     \caption{Plot of FIR Band-Pass Filter Frequency Response}
     \label{fig:9}
 \end{figure}
-\end{document}}
+\end{document}
